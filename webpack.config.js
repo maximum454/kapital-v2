@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -12,9 +11,40 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist/'),
         filename: 'kapital.js',
-        publicPath: '/dist/',
+        //publicPath: 'dist/',
     },
     devtool: "source-map",
+    performance: {
+        hints: false
+    },
+    watchOptions: {
+        aggregateTimeout: 100,
+    },
+    plugins: [
+        //new CleanWebpackPlugin(['app/assets/admin/build']),
+        new MiniCssExtractPlugin({
+            filename: 'kapital.css',
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
+    ],
+    optimization: {
+        minimizer: [
+            // we specify a custom UglifyJsPlugin here to get source maps in production
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: false,
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: true
+            })
+        ]
+    },
     module: {
         rules: [
             {
@@ -87,9 +117,4 @@ module.exports = {
 
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'kapital.css',
-        }),
-    ],
 };

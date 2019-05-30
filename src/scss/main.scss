@@ -1,0 +1,9 @@
+.main{
+	&__news{
+		display: flex;
+		margin-bottom: 20px;
+		&:first-child{
+			margin-top: -47px;
+		}
+	}
+}

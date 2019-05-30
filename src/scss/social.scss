@@ -1,0 +1,41 @@
+.social{
+	width: 100%;
+	padding: 17px 0;
+	border-bottom: 1px solid #DDDDDD;
+	&__inner{
+		max-width: 200px;
+		margin-right: 0;
+		margin-left: auto;
+	}
+	&__item{
+		display: inline-block;
+		margin-left: 10px;
+		text-decoration: none;
+		background-repeat: no-repeat;
+		&.telegram{
+			background-image: url("img/telegram.svg");
+			width: 25px;
+			height: 25px;
+		}
+		&.youtube{
+			background-image: url("img/youtube.svg");
+			width: 30px;
+			height: 21px;
+		}
+		&.fb{
+			background-image: url("img/fb.svg");
+			width: 21px;
+			height: 21px;
+		}
+		&.vk{
+			background-image: url("img/vk.svg");
+			width: 33px;
+			height: 21px;
+		}
+		&.inst{
+			background-image: url("img/instagram.svg");
+			width: 21px;
+			height: 21px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrp {
+
+}
+
+
+a:hover {
+	color: #00B25D;
+	text-decoration: underline;
+}
+.container {
+	max-width: 1200px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+.banner-a1{
+	text-align: center;
+}
+.banner-a2{
+	width: 100%;
+	max-width: 660px;
+	height: 90px;
+	margin-bottom: 20px;
+}
+.banner-a3{
+	width: 100%;
+	max-width: 660px;
+	height: 90px;
+	margin-bottom: 20px;
+}
+
+
+
+

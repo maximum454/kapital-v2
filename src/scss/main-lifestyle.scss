@@ -1,0 +1,124 @@
+.main-lifestyle{
+	width: 100%;
+	max-width: 400px;
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 18px;
+	}
+	&__title{
+		display: block;
+		color: #404040;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: bold;
+		margin: 0;
+		position: relative;
+		padding-left: 31px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0,-50%);
+			background-color: #00B25D;
+			width: 17px;
+			height: 17px;
+			border-radius: 50%;
+			overflow: hidden;
+			
+		}
+	}
+
+	&__time{
+		color: #404040;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: bold;
+		border-bottom: 2px solid #00B25D;
+		align-self: flex-start;
+	}
+	&__inner{
+		padding: 20px;
+		background-color: #000;
+	}
+	&__item{
+		display: flex;
+		position: relative;
+		margin-bottom: 30px;
+		flex-direction: row;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&.big{
+			flex-direction: column;
+			.main-news__img{
+				max-width: 100%;
+				margin-bottom: 8px;
+			}
+		}
+	}
+	&__img{
+		display: block;
+		width: 100%;
+		max-width: 140px;
+		flex-shrink: 0;
+		margin-right: 10px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			background-color: #00B25D;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			overflow: hidden;
+
+		}
+		img{
+			max-width: 100%;
+			display: block;
+		}
+	}
+	&__info{
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+		font-size: 10px;
+		color: #939393;
+	}
+	&__date{
+		&.big{
+			color: #007443;
+			font-size: 18px;
+			line-height: 21px;
+			font-weight: bold;
+		}
+	}
+	&__rubric{
+		padding: 0 5px;
+		margin-right: 10px;
+		color: #00B25D;
+		text-transform: uppercase;
+	}
+	&__view{
+		color: #939393;
+		background-image: url("img/view.svg");
+		background-position: center left;
+		background-repeat: no-repeat;
+		padding-left: 12px;
+		margin-left: auto;
+		margin-right: 0;
+	}
+	&__name{
+		display: block;
+		color: #fff;
+		font-size: 16px;
+		line-height: 18px;
+		font-family: 'PT Serif', serif;
+		position: relative;
+	}
+}

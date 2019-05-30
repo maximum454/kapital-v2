@@ -1,1 +1,7 @@
+import './js/popper.min'
+import './js/bootstrap'
 import './kapital.scss'
+import './img/logo.png'
+import './img/Rectangle2.1.png'
+import './img/Rectangle2.2.png'
+import './img/Adv-02.png'

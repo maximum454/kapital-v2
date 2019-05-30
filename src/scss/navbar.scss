@@ -1,0 +1,13 @@
+.navbar{
+	padding: 0;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	.navbar-nav{
+		justify-content: space-between;
+		width: 100%;
+		.nav-link{
+			color: #404040;
+			font-size: 16px;
+		}
+	}
+}

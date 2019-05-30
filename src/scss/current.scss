@@ -1,0 +1,29 @@
+.current {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background-color: rgba(#939393, .2);
+	&__box{
+		display: flex;
+		padding: 10px 0;
+		&.vallet{
+			border-top: 10px solid #00B25D;
+		}
+		&.oil {
+			border-top: 10px solid #404040;
+		}
+		&.cript {
+			border-top: 10px solid #00B2FF;
+		}
+	}
+
+	&__item {
+		width: 33%;
+		flex-shrink: 0;
+	}
+
+	&__name {
+		font-size: 11px;
+		line-height: 13px;
+	}
+
+}
