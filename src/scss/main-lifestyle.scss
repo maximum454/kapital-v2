@@ -1,6 +1,9 @@
 .main-lifestyle{
 	width: 100%;
 	max-width: 400px;
+	padding: 20px;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
 	&__header{
 		display: flex;
 		justify-content: space-between;
@@ -16,6 +19,7 @@
 		margin: 0;
 		position: relative;
 		padding-left: 31px;
+		padding-right: 17px;
 		&:before{
 			content: '';
 			position: absolute;
@@ -25,23 +29,22 @@
 			background-color: #00B25D;
 			width: 17px;
 			height: 17px;
-			border-radius: 50%;
 			overflow: hidden;
-			
 		}
-	}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 9px;
+			right: 0;
+			background-image: url("img/arrow.svg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 7px;
+			height: 14px;
+			overflow: hidden;
 
-	&__time{
-		color: #404040;
-		font-size: 12px;
-		line-height: 14px;
-		font-weight: bold;
-		border-bottom: 2px solid #00B25D;
-		align-self: flex-start;
-	}
-	&__inner{
-		padding: 20px;
-		background-color: #000;
+		}
 	}
 	&__item{
 		display: flex;
@@ -53,9 +56,14 @@
 		}
 		&.big{
 			flex-direction: column;
-			.main-news__img{
+			margin-bottom: 32px;
+			.main-lifestyle__img{
 				max-width: 100%;
 				margin-bottom: 8px;
+			}
+			.main-lifestyle__name{
+				font-size: 26px;
+				line-height: 30px;
 			}
 		}
 	}
@@ -90,14 +98,6 @@
 		font-size: 10px;
 		color: #939393;
 	}
-	&__date{
-		&.big{
-			color: #007443;
-			font-size: 18px;
-			line-height: 21px;
-			font-weight: bold;
-		}
-	}
 	&__rubric{
 		padding: 0 5px;
 		margin-right: 10px;
@@ -115,10 +115,16 @@
 	}
 	&__name{
 		display: block;
-		color: #fff;
+		color: #404040;
 		font-size: 16px;
 		line-height: 18px;
 		font-family: 'PT Serif', serif;
 		position: relative;
+	}
+	&__anons{
+		color: #000;
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0;
 	}
 }

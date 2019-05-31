@@ -1,17 +1,27 @@
 .current {
+	width: 100%;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	background-color: rgba(#939393, .2);
+	&__inner{
+		display: flex;
+		width: 1120px;
+		margin: 0 auto;
+	}
 	&__box{
+		width: 100%;
 		display: flex;
 		padding: 10px 0;
 		&.vallet{
+			max-width: 400px;
 			border-top: 10px solid #00B25D;
 		}
 		&.oil {
+			max-width: 132px;
 			border-top: 10px solid #404040;
 		}
 		&.cript {
+			max-width: 400px;
 			border-top: 10px solid #00B2FF;
 		}
 	}
@@ -22,8 +32,63 @@
 	}
 
 	&__name {
+		font-style: normal;
+		font-weight: normal;
 		font-size: 11px;
 		line-height: 13px;
+		text-transform: uppercase;
+		color: #000000;
+		margin-bottom: 4px;
+	}
+	&__num{
+		display: flex;
+		align-self: center;
+	}
+	&__price{
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 14px;
+		margin-right: 3px;
+		color: #000000;
+	}
+	&__dec{
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 14px;
+		position: relative;
+		padding-left: 10px;
+		&.up{
+			color: #00B35D;
+			&:before{
+				content: '↑';
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #000000;
+			}
+		}
+		&.down{
+			color: #C1002E;
+			&:before{
+				content: '↓';
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #000000;
+			}
+		}
+	}
+	&__graf{
+		margin-left: 25px;
+		padding: 10px 0;
+		align-self: flex-end;
+	}
+	&__search{
+		align-self: center;
+		margin-left: auto;
+		margin-right: 0;
 	}
 
 }

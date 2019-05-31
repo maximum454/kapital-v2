@@ -1,9 +1,40 @@
 .main{
+	width: 1120px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	&__row{
+		display: flex;
+	}
+	&__contant{
+		width: 100%;
+		max-width: 660px;
+		margin-right: 20px;
+	}
+	&__aside{
+		margin-top: 20px;
+		width: 100%;
+		max-width: 460px;
+		display: flex;
+	}
 	&__news{
 		display: flex;
 		margin-bottom: 20px;
 		&:first-child{
 			margin-top: -47px;
 		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__rubrik{
+		width: 100%;
+		max-width: 180px;
+		padding-right: 20px;
+		margin-right: 20px;
+		border-right: 1px solid #DDDDDD;
+	}
+	&__right{
+		width: 100%;
+		max-width: 240px;
 	}
 }

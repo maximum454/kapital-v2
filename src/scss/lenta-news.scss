@@ -28,6 +28,9 @@
 	&__item{
 		position: relative;
 		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 	&__img{
 		display: block;

@@ -1,13 +1,27 @@
 .navbar{
-	padding: 0;
+	width: 1120px;
+	padding: 8px 0;
+	margin: 0 auto;
 	border-top: 1px solid #DDDDDD;
 	border-bottom: 1px solid #DDDDDD;
 	.navbar-nav{
+		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 		.nav-link{
 			color: #404040;
-			font-size: 16px;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 17px;
+			line-height: 20px;
+			text-decoration: none;
+			&:hover{
+				color: #00B35D;
+			}
 		}
 	}
 }

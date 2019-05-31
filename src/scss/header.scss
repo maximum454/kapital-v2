@@ -1,5 +1,8 @@
 .header{
-	margin-bottom: 11px;
+	width: 1120px;
+	margin: 0 auto 11px;
+	display: flex;
+	align-items: center;
 	&__title{
 		font-size: 11px;
 		line-height: 14px;
@@ -7,5 +10,13 @@
 		text-transform: uppercase;
 		letter-spacing: 2.9px;
 		margin: 5px 0 0;
+	}
+	&__logo{
+		width: 243px;
+		margin-right: 18px;
+		align-self: center;
+		img{
+			width: 100%;
+		}
 	}
 }

@@ -1,0 +1,78 @@
+.dosser{
+	position: relative;
+	width: 100%;
+	padding-bottom: 20px;
+	margin-bottom: 19px;
+	&__title{
+		display: block;
+		color: #404040;
+		font-size: 18px;
+		line-height: 21px;
+		font-weight: bold;
+		margin-bottom: 16px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 7px;
+			right: 0;
+			background-image: url("img/arrow.svg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 7px;
+			height: 14px;
+			overflow: hidden;
+
+		}
+	}
+	&__item{
+		display: block;
+		text-decoration: none;
+		margin-bottom: 26px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__inner{
+		display: flex;
+		margin-bottom: 10px;
+	}
+	&__img{
+		display: block;
+		text-decoration: none;
+		width: 80px;
+		height: 100px;
+		flex-shrink: 0;
+		margin-right: 10px;
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+	&__date{
+		font-weight: 500;
+		font-size: 11px;
+		line-height: 13px;
+		color: #939393;
+		margin-bottom: 17px;
+	}
+	&__name{
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+		color: #404040;
+		padding-bottom: 5px;
+		border-bottom: 2px solid #00B35D;;
+	}
+	&__anons{
+		font-size: 13px;
+		line-height: 18px;
+		color: #000000;
+		margin: 0;
+	}
+}

@@ -1,0 +1,16 @@
+.more-news{
+	text-align: center;
+	.btn{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	&__title{
+		font-style: normal;
+		font-weight: bold;
+		font-size: 9px;
+		line-height: 12px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #404040;
+	}
+}
