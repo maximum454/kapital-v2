@@ -916,7 +916,10 @@ a {
       overflow: hidden; }
   .project__item {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-bottom: 10px; }
+    .project__item:last-child {
+      margin-bottom: 0; }
 
 .dosser {
   position: relative;

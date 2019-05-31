@@ -38,5 +38,9 @@
 	&__item{
 		display: block;
 		text-decoration: none;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 }
