@@ -190,10 +190,17 @@ a {
 
 .header {
   width: 1120px;
+  height: 80px;
   margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .header__title {
     font-size: 11px;
     line-height: 14px;
@@ -209,10 +216,15 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 260px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    max-width: 260px;
+    height: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin-right: 18px;
-    -ms-flex-item-align: center;
-        align-self: center;
     padding-right: 18px;
     border-right: 1px solid #DDDDDD; }
     .header__logo img {
@@ -222,7 +234,11 @@ a {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    max-width: 390px; }
+    max-width: 390px;
+    margin-left: 0;
+    margin-right: auto; }
+  .header__search {
+    justify-self: flex-end; }
   .header__img {
     width: 130px;
     height: 80px;
@@ -260,6 +276,22 @@ a {
       width: 5px;
       height: 10px;
       overflow: hidden; }
+  .header__social {
+    height: 100%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    margin-left: 20px;
+    position: relative; }
+    .header__social:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #DDDDDD;
+      width: 1px;
+      height: 100%; }
 
 .navbar {
   width: 100%;
@@ -330,31 +362,23 @@ a {
 
 .social {
   max-width: 200px;
-  margin-right: 0;
-  margin-left: auto;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  position: relative;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .social:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #DDDDDD;
-    width: 1px;
-    height: 100%; }
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
   .social__item {
     display: inline-block;
     margin-left: 10px;
     text-decoration: none;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: 100%; }
     .social__item.telegram {
       background-image: url(img/telegram.svg);
-      width: 25px;
-      height: 25px; }
+      width: 21px;
+      height: 21px; }
     .social__item.youtube {
       background-image: url(img/youtube.svg);
       width: 30px;

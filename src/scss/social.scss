@@ -1,28 +1,18 @@
 .social{
 	max-width: 200px;
-	margin-right: 0;
-	margin-left: auto;
-	align-self: flex-end;
-	position: relative;
+	height: 100%;
 	display: flex;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: #DDDDDD;
-		width: 1px;
-		height: 100%;
-	}
+	align-items: flex-end;
 	&__item{
 		display: inline-block;
 		margin-left: 10px;
 		text-decoration: none;
 		background-repeat: no-repeat;
+		background-size: 100%;
 		&.telegram{
 			background-image: url("img/telegram.svg");
-			width: 25px;
-			height: 25px;
+			width: 21px;
+			height: 21px;
 		}
 		&.youtube{
 			background-image: url("img/youtube.svg");
