@@ -13,7 +13,7 @@
 		display: flex;
 		padding: 10px 0;
 		&.vallet{
-			max-width: 400px;
+			max-width: 430px;
 			border-top: 10px solid #00B25D;
 		}
 		&.oil {
@@ -21,7 +21,7 @@
 			border-top: 10px solid #404040;
 		}
 		&.cript {
-			max-width: 400px;
+			max-width: 430px;
 			border-top: 10px solid #00B2FF;
 		}
 	}
@@ -84,11 +84,6 @@
 		margin-left: 25px;
 		padding: 10px 0;
 		align-self: flex-end;
-	}
-	&__search{
-		align-self: center;
-		margin-left: auto;
-		margin-right: 0;
 	}
 
 }

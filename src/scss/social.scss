@@ -2,6 +2,18 @@
 	max-width: 200px;
 	margin-right: 0;
 	margin-left: auto;
+	align-self: flex-end;
+	position: relative;
+	display: flex;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #DDDDDD;
+		width: 1px;
+		height: 100%;
+	}
 	&__item{
 		display: inline-block;
 		margin-left: 10px;

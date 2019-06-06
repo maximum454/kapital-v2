@@ -20,19 +20,24 @@
 		font-weight: bold;
 		margin-bottom: 16px;
 		position: relative;
-		&:after{
-			content: '';
-			position: absolute;
-			top: 7px;
-			right: 0;
-			background-image: url("img/arrow.svg");
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-position: center;
-			width: 7px;
-			height: 14px;
-			overflow: hidden;
+		.arrow{
+			position: relative;
+			padding-right: 13px;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%);
+				background-image: url("img/arrow.svg");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 7px;
+				height: 14px;
+				overflow: hidden;
 
+			}
 		}
 	}
 	&__nav{
