@@ -1,20 +1,20 @@
-.main-lifestyle{
+.main-same{
 	width: 100%;
-	max-width: 400px;
-	padding: 20px;
-	border-left: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
+	position: relative;
 	&__header{
+		grid-area: header;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 18px;
+		border-top: 1px solid #DDDDDD;
+		border-bottom: 1px solid #DDDDDD;
+		padding: 15px 0;
 	}
 	&__title{
 		display: block;
 		color: #404040;
 		font-size: 24px;
-		line-height: 28px;
+		line-height: 24px;
 		font-weight: bold;
 		margin: 0;
 		position: relative;
@@ -30,11 +30,12 @@
 			width: 17px;
 			height: 17px;
 			overflow: hidden;
+
 		}
 		&:after{
 			content: '';
 			position: absolute;
-			top: 9px;
+			top: 7px;
 			right: 0;
 			background-image: url("img/arrow.svg");
 			background-size: 100%;
@@ -46,25 +47,33 @@
 
 		}
 	}
+	&__inner{
+		display: flex;
+		padding: 20px 0;
+	}
+	&__list{
+
+	}
 	&__item{
 		display: flex;
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 		flex-direction: row;
 		&:last-child{
 			margin-bottom: 0;
 		}
 		&.big{
+			width: 240px;
+			flex-shrink: 0;
+			margin-right: 20px;
 			flex-direction: column;
-			margin-bottom: 32px;
-			.main-lifestyle__img{
+			.main-same__img{
 				max-width: 100%;
-				margin-bottom: 8px;
+				margin-bottom: 18px;
 			}
-			.main-lifestyle__name{
-				font-size: 26px;
-				line-height: 30px;
-				margin-bottom: 8px;
+			.main-same__name{
+				font-size: 18px;
+				line-height: 20px;
 			}
 		}
 	}
@@ -75,18 +84,6 @@
 		flex-shrink: 0;
 		margin-right: 10px;
 		position: relative;
-		&:before{
-			content: '';
-			position: absolute;
-			bottom: 5px;
-			left: 5px;
-			background-color: #00B25D;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			overflow: hidden;
-
-		}
 		img{
 			max-width: 100%;
 			display: block;
@@ -95,7 +92,6 @@
 	&__info{
 		display: flex;
 		align-items: center;
-		max-width: 208px;
 		margin-bottom: 5px;
 		font-size: 10px;
 		color: #939393;
@@ -120,13 +116,8 @@
 		color: #404040;
 		font-size: 16px;
 		line-height: 18px;
+		font-weight: bold;
 		font-family: 'PT Serif', serif;
 		position: relative;
-	}
-	&__anons{
-		color: #000;
-		font-size: 16px;
-		line-height: 22px;
-		margin: 0;
 	}
 }

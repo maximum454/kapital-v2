@@ -9,7 +9,6 @@ html, body {
 }
 
 .wrp {
-	padding: 0 15px;
 }
 
 a {
@@ -48,7 +47,25 @@ a {
 	border-radius: 0;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.arrow{
+	position: relative;
+	padding-right: 13px;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		background-image: url("img/arrow.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 7px;
+		height: 14px;
+		overflow: hidden;
 
+	}
+}
 @media (prefers-reduced-motion: reduce) {
 	.btn {
 		transition: none;
