@@ -1,4 +1,5 @@
 import './kapital.scss'
+import './js/slick'
 
 import './img/logo.png'
 import './img/logo.svg'
@@ -15,6 +16,11 @@ import './img/current-graf.svg'
 import './img/search.svg'
 
 
+$('.js-project').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
 /*
 function responseMenu() {
     $('navbar__dropdown .nav-item').appendTo('.navbar-nav');
