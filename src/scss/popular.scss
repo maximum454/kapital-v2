@@ -1,9 +1,10 @@
-.popular{
+.popular {
 	position: relative;
 	width: 100%;
 	padding-bottom: 20px;
 	margin-bottom: 19px;
-	&:after{
+
+	&:after {
 		content: '';
 		position: absolute;
 		bottom: 0;
@@ -12,7 +13,8 @@
 		margin: 0;
 		border-bottom: 1px solid #DDDDDD;
 	}
-	&__title{
+
+	&__title {
 		display: block;
 		color: #404040;
 		font-size: 18px;
@@ -20,10 +22,12 @@
 		font-weight: bold;
 		margin-bottom: 16px;
 		position: relative;
-		.arrow{
+
+		.arrow {
 			position: relative;
 			padding-right: 13px;
-			&:after{
+
+			&:after {
 				content: '';
 				position: absolute;
 				top: 50%;
@@ -40,30 +44,32 @@
 			}
 		}
 	}
-	&__nav{
-		margin-bottom: 23px;
-		display: flex;
-	}
-	.nav-link{
+
+	.nav-link {
+		display: inline-block;
 		font-size: 14px;
 		line-height: 16px;
 		color: #404040;
 		padding: 0 0 3px 0;
 		margin-right: 10px;
-		&.active{
+
+		&.active {
 			font-weight: bold;
 			border-bottom: 3px solid #00B35D;
 		}
 	}
-	&__item{
+
+	&__item {
 		display: block;
 		text-decoration: none;
 		margin-bottom: 20px;
-		&:last-child{
+
+		&:last-child {
 			margin-bottom: 0;
 		}
 	}
-	&__img{
+
+	&__img {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -72,17 +78,20 @@
 		flex-shrink: 0;
 		margin-right: 10px;
 		margin-bottom: 10px;
-		&:hover{
+
+		&:hover {
 			text-decoration: none;
 		}
-		img{
+
+		img {
 			width: 140px;
 			height: 100%;
 			display: block;
 			object-fit: cover;
 		}
 	}
-	&__num{
+
+	&__num {
 		font-weight: bold;
 		font-size: 128px;
 		line-height: 128px;
@@ -91,20 +100,23 @@
 		text-decoration: none;
 		margin-left: 45px;
 	}
-	&__info{
+
+	&__info {
 		display: flex;
 		align-items: center;
 		margin-bottom: 5px;
 		font-size: 10px;
 		color: #939393;
 	}
-	&__rubrik{
+
+	&__rubrik {
 		padding: 0 5px;
 		margin-right: 10px;
 		color: #00B25D;
 		text-transform: uppercase;
 	}
-	&__view{
+
+	&__view {
 		color: #939393;
 		background-image: url("img/view.svg");
 		background-position: center left;
@@ -113,13 +125,15 @@
 		margin-left: auto;
 		margin-right: 0;
 	}
-	&__date{
+
+	&__date {
 		font-weight: 500;
 		font-size: 11px;
 		line-height: 13px;
 		color: #939393;
 	}
-	&__name{
+
+	&__name {
 		display: block;
 		text-decoration: none;
 		font-family: 'PT Serif', serif;
@@ -128,5 +142,48 @@
 		line-height: 18px;
 		font-weight: bold;
 
+	}
+
+	&__tabs {
+		> input {
+			display: none;
+			position: absolute;
+
+			&:checked + label {
+				font-weight: bold;
+				border-bottom: 3px solid #00B35D;
+			}
+		}
+	}
+
+	&__section {
+		display: none;
+		margin-top: 23px;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		animation-name: fadeIn;
+	}
+
+	#tab1:checked ~ #content-tab1,
+	#tab2:checked ~ #content-tab2,
+	#tab3:checked ~ #content-tab3 {
+		display: block;
+	}
+
+	@-webkit-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }

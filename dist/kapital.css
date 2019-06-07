@@ -1551,12 +1551,8 @@ a {
         width: 7px;
         height: 14px;
         overflow: hidden; }
-  .popular__nav {
-    margin-bottom: 23px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
   .popular .nav-link {
+    display: inline-block;
     font-size: 14px;
     line-height: 16px;
     color: #404040;
@@ -1639,6 +1635,37 @@ a {
     font-size: 16px;
     line-height: 18px;
     font-weight: bold; }
+  .popular__tabs > input {
+    display: none;
+    position: absolute; }
+    .popular__tabs > input:checked + label {
+      font-weight: bold;
+      border-bottom: 3px solid #00B35D; }
+  .popular__section {
+    display: none;
+    margin-top: 23px;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn; }
+  .popular #tab1:checked ~ #content-tab1,
+  .popular #tab2:checked ~ #content-tab2,
+  .popular #tab3:checked ~ #content-tab3 {
+    display: block; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .destination {
   position: relative;
