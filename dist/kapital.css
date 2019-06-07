@@ -955,7 +955,7 @@ a {
     grid-template-rows: repeat(3, 90px);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    padding-top: 20px; }
+    padding: 20px 0; }
   .main-same__item {
     display: inline-grid;
     position: relative;
@@ -968,7 +968,7 @@ a {
     .main-same__item.big {
       display: block;
       grid-column: 1 / 2;
-      grid-row: 1 /5; }
+      grid-row: 1 /4; }
       .main-same__item.big .main-same__img {
         max-width: 100%;
         margin-bottom: 18px; }
