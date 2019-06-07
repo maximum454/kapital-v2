@@ -9,6 +9,7 @@ html, body {
 }
 
 .wrp {
+	padding: 0 15px;
 }
 
 a {
@@ -112,6 +113,9 @@ a {
 	max-width: 660px;
 	height: 90px;
 	margin-bottom: 20px;
+	img{
+		max-width: 100%;
+	}
 }
 .banner-aside{
 	width: 100%;

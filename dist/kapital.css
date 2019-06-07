@@ -10,6 +10,9 @@ html, body {
   margin: 0;
   padding: 0; }
 
+.wrp {
+  padding: 0 15px; }
+
 a {
   text-decoration: none;
   background-color: transparent; }
@@ -115,6 +118,8 @@ a {
   max-width: 660px;
   height: 90px;
   margin-bottom: 20px; }
+  .banner img {
+    max-width: 100%; }
 
 .banner-aside {
   width: 100%;
@@ -124,7 +129,8 @@ a {
   border-bottom: 1px solid #DDDDDD; }
 
 .current {
-  width: 100%;
+  width: calc(100% + 30px);
+  margin-left: -15px;
   margin-top: 20px;
   margin-bottom: 10px;
   background-color: rgba(147, 147, 147, 0.2); }
@@ -133,7 +139,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     width: 1120px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 15px; }
   .current__box {
     width: 100%;
     display: -webkit-box;
@@ -423,6 +430,9 @@ a {
     width: 100%;
     max-width: 660px;
     margin-right: 20px; }
+    .main__contant.v2 {
+      max-width: 640px;
+      margin-top: 20px; }
   .main__aside {
     margin-top: 20px;
     width: 100%;
@@ -441,13 +451,19 @@ a {
       margin-bottom: 0; }
   .main__rubrik {
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     padding-right: 20px;
     margin-right: 20px;
     border-right: 1px solid #DDDDDD; }
   .main__right {
     width: 100%;
     max-width: 240px; }
+  .main.v2 .main__contant {
+    max-width: 640px;
+    margin-top: 20px; }
+  .main.v2 .main__rubrik {
+    padding-left: 20px;
+    border-left: 1px solid #DDDDDD; }
 
 .lenta-news {
   width: 100%;
@@ -562,7 +578,7 @@ a {
       .lenta-news.v2 .lenta-news__item:last-child {
         margin-bottom: 0; }
     .lenta-news.v2 .lenta-news__img {
-      margin-right: 20px; }
+      margin: 0 20px 0 0; }
     .lenta-news.v2 .lenta-news__anons {
       color: #000;
       font-size: 15px;
@@ -589,7 +605,7 @@ a {
     font-size: 24px;
     line-height: 28px;
     font-weight: bold;
-    margin: 0;
+    margin: 0 20px 0 0;
     position: relative;
     padding-left: 31px; }
     .main-news__title:before {
@@ -702,30 +718,65 @@ a {
     line-height: 18px;
     font-family: 'PT Serif', serif;
     position: relative; }
+    .main-news__name:hover {
+      color: #00B25D; }
   .main-news.v2 {
     margin-bottom: 20px; }
-    .main-news.v2 .main-news__inner {
+    .main-news.v2 .main-news__header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      padding: 20px;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #DDDDDD; }
+    .main-news.v2 .main-news__title:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      background-color: #00B25D;
+      width: 17px;
+      height: 17px;
+      overflow: hidden;
+      border-radius: 0; }
+    .main-news.v2 .main-news__time {
+      display: none; }
+    .main-news.v2 .main-news__inner {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      grid-template-rows: repeat(3, 90px);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      padding-top: 20px;
       background-color: #EDEDED; }
-    .main-news.v2 .main-news__item.big {
-      width: 340px;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      margin-right: 20px;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      .main-news.v2 .main-news__item.big .main-news__img {
-        display: block;
-        max-width: 100%;
-        margin-bottom: 18px; }
-      .main-news.v2 .main-news__item.big .main-news__name {
-        font-size: 24px;
-        line-height: 28px; }
+    .main-news.v2 .main-news__item {
+      margin-bottom: 0; }
+      .main-news.v2 .main-news__item.big {
+        grid-column: 1 / 2;
+        grid-row: 1 /5; }
+        .main-news.v2 .main-news__item.big .main-news__img {
+          display: block;
+          max-width: 100%;
+          margin: 0 0 18px; }
+        .main-news.v2 .main-news__item.big .main-news__name {
+          font-size: 24px;
+          line-height: 28px; }
+          .main-news.v2 .main-news__item.big .main-news__name:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            background-color: #00B35D;
+            width: 180px;
+            height: 5px; }
     .main-news.v2 .main-news__name {
       display: block;
       color: #404040;
@@ -899,31 +950,25 @@ a {
       height: 14px;
       overflow: hidden; }
   .main-same__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 20px 0; }
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: repeat(3, 90px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-top: 20px; }
   .main-same__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: inline-grid;
     position: relative;
-    margin-bottom: 10px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px; }
     .main-same__item:last-child {
       margin-bottom: 0; }
     .main-same__item.big {
-      width: 240px;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      margin-right: 20px;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      display: block;
+      grid-column: 1 / 2;
+      grid-row: 1 /5; }
       .main-same__item.big .main-same__img {
         max-width: 100%;
         margin-bottom: 18px; }
@@ -934,9 +979,6 @@ a {
     display: block;
     width: 100%;
     max-width: 140px;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    margin-right: 10px;
     position: relative; }
     .main-same__img img {
       max-width: 100%;

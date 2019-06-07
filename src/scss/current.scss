@@ -1,5 +1,6 @@
 .current {
-	width: 100%;
+	width: calc(100% + 30px);
+	margin-left: -15px;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	background-color: rgba(#939393, .2);
@@ -7,6 +8,7 @@
 		display: flex;
 		width: 1120px;
 		margin: 0 auto;
+		padding: 0 15px;
 	}
 	&__box{
 		width: 100%;
