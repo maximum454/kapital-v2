@@ -2,7 +2,17 @@
 	width: 1160px;
 	margin: 0 auto;
 	padding: 20px 0;
-	&__left{
+	display: grid;
+	grid-template-columns: 1fr 275px;
+	grid-template-rows: auto;
+	grid-column-gap: 20px;
+	grid-template-areas:
+			"contant aside";
+	&__contant{
+		grid-area: contant;
 		border-right: 1px solid #DDDDDD;
+	}
+	&__aside{
+		grid-area: aside;
 	}
 }

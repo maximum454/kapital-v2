@@ -1,19 +1,9 @@
 .popular {
 	position: relative;
 	width: 100%;
-	padding-bottom: 20px;
 	margin-bottom: 19px;
-
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: 0;
-		border-bottom: 1px solid #DDDDDD;
-	}
-
+	padding-right: 9px;
+	border-right: 1px solid #dddddd;
 	&__title {
 		display: block;
 		color: #404040;
@@ -46,50 +36,25 @@
 	}
 
 	.nav-link {
+		width: 85px;
+		height: 30px;
+		margin-right: -4.9px;
 		display: inline-block;
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 30px;
 		color: #404040;
-		padding: 0 0 3px 0;
-		margin-right: 10px;
-
-		&.active {
-			font-weight: bold;
-			border-bottom: 3px solid #00B35D;
-		}
+		text-align: center;
+		border: 1px solid #404040;
 	}
 
 	&__item {
 		display: block;
 		text-decoration: none;
 		margin-bottom: 20px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
+		padding-bottom: 20px;
+		border-bottom: 1px solid #dddddd;
 	}
 
-	&__img {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		text-decoration: none;
-		height: 90px;
-		flex-shrink: 0;
-		margin-right: 10px;
-		margin-bottom: 10px;
-
-		&:hover {
-			text-decoration: none;
-		}
-
-		img {
-			width: 140px;
-			height: 100%;
-			display: block;
-			object-fit: cover;
-		}
-	}
 
 	&__num {
 		font-weight: bold;
@@ -110,29 +75,39 @@
 	}
 
 	&__rubrik {
-		padding: 0 5px;
-		margin-right: 10px;
-		color: #00B25D;
-		text-transform: uppercase;
+		color: #007443;
+		font-size: 14px;
+		margin-bottom: 2px;
 	}
 
 	&__view {
-		color: #939393;
+		color: #404040;
+		font-size: 12px;
 		background-image: url("img/view.svg");
 		background-position: center left;
 		background-repeat: no-repeat;
 		padding-left: 12px;
-		margin-left: auto;
 		margin-right: 0;
 	}
 
 	&__date {
 		font-weight: 500;
-		font-size: 11px;
+		font-size: 12px;
 		line-height: 13px;
-		color: #939393;
+		color: #404040;
+		margin-right: 10px;
 	}
-
+	&__link{
+		display: block;
+		text-decoration: none;
+		margin-bottom: 9px;
+		&:hover{
+			text-decoration: none;
+			*{
+				color: #007443;
+			}
+		}
+	}
 	&__name {
 		display: block;
 		text-decoration: none;
@@ -141,17 +116,22 @@
 		font-size: 16px;
 		line-height: 18px;
 		font-weight: bold;
-
+		margin: 0 0 10px;
+	}
+	&__anons{
+		color: #404040;
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0 0 4px;
 	}
 
 	&__tabs {
 		> input {
 			display: none;
-			position: absolute;
-
 			&:checked + label {
+				color: #ffffff;
 				font-weight: bold;
-				border-bottom: 3px solid #00B35D;
+				background-color: #00B25D;
 			}
 		}
 	}

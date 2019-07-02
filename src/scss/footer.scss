@@ -3,14 +3,23 @@
 	max-width: 1160px;
 	padding: 13px 0 35px;
 	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 177px 1fr 177px;
+	grid-template-rows: auto;
+	grid-column-gap: 20px;
+	grid-row-gap: 12px;
+	grid-template-areas: "logo nav social"
+							"logo txt txt";
 	img{
 		max-width: 100%;
 	}
 	&__logo{
+		grid-area: logo;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 	&__txt{
+		grid-area: txt;
 		color: #007443;
 		font-size: 10px;
 		line-height: 11px;
@@ -22,13 +31,11 @@
 		letter-spacing: -0.01em;
 		color: #000000;
 	}
-	&__col{
-		display: flex;
-		justify-content: space-between;
+	&__nav{
+		grid-area: nav;
 	}
-	.nav{
-		margin-bottom: 14px;
-		flex-shrink: 0;
+	&__social{
+		grid-area: social;
 	}
 	.nav-link{
 

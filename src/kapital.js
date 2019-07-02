@@ -18,6 +18,8 @@ import './img/search.svg'
 
 
 $('.js-project').slick({
+    arrows: false,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1

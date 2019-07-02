@@ -14210,6 +14210,8 @@ __webpack_require__(/*! ./img/current-graf.svg */ "./src/img/current-graf.svg");
 __webpack_require__(/*! ./img/search.svg */ "./src/img/search.svg");
 
 $('.js-project').slick({
+    arrows: false,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1

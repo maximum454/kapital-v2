@@ -1,19 +1,15 @@
 .header{
 	width: 1160px;
-	height: 80px;
-	margin: 10px auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: 236px 1fr 270px;
+	grid-template-rows: auto;
+	grid-column-gap: 20px;
+	grid-template-areas: 'logo news search';
 	&__logo{
+		grid-area: logo;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: 100%;
-		max-width: 260px;
-		height: 100%;
-		flex-shrink: 0;
-		margin-right: 18px;
+		align-items: center;
 		padding-right: 18px;
 		border-right: 1px solid #DDDDDD;
 		img{
@@ -21,14 +17,13 @@
 		}
 	}
 	&__news{
+		grid-area: news;
 		display: flex;
-		width: 100%;
-		max-width: 390px;
-		margin-left: 0;
-		margin-right: auto;
+		padding-right: 18px;
+		border-right: 1px solid #DDDDDD;
 	}
 	&__search{
-		justify-self: flex-end;
+		grid-area: search;
 	}
 	&__img{
 		width: 130px;
@@ -43,7 +38,6 @@
 		}
 	}
 	&__name{
-
 		font-weight: bold;
 		font-size: 15px;
 		line-height: 18px;
