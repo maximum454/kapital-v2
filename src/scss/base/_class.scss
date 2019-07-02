@@ -9,7 +9,7 @@ html, body {
 }
 
 .wrp {
-	padding: 0 15px;
+	color: #404040;
 }
 
 a {
@@ -26,12 +26,6 @@ a {
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-}
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: -15px;
-	margin-left: -15px;
 }
 .btn {
 	display: inline-block;
@@ -110,7 +104,7 @@ a {
 }
 .banner{
 	width: 100%;
-	max-width: 660px;
+	max-width: 840px;
 	height: 90px;
 	margin-bottom: 20px;
 	img{

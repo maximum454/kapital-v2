@@ -1,0 +1,87 @@
+.slider-events{
+	background-color: #404040;
+	display: flex;
+	margin-bottom: 20px;
+	&__for{
+		width: 100%;
+		max-width: 570px;
+		flex-shrink: 0;
+
+		.slider-events__info{
+			position: absolute;
+			bottom: 16px;
+			left: 40px;
+		}
+		.slider-events__item{
+			padding: 0 0 20px;
+		}
+	}
+	&__nav{
+		width: 100%;
+	}
+	&__item{
+		display: block;
+		text-decoration: none;
+		border-bottom: 1px solid #00B35D;
+		padding: 20px;
+
+	}
+	&__info{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	&__rubric{
+		color: #00B35D;
+		font-size: 14px;
+		margin-right: 12px;
+	}
+	&__date{
+		color: #ffffff;
+		font-size: 12px;
+		margin-right: 15px;
+	}
+	&__view{
+		color: #ffffff;
+		background-image: url("img/view.svg");
+		background-position: center left;
+		background-repeat: no-repeat;
+		padding-left: 12px;
+		font-size: 12px;
+	}
+	&__img{
+		width: 100%;
+		position: relative;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(64,64,64,0.65) 100%);
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(64,64,64,0.65) 100%);
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(64,64,64,0.65) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6404040',GradientType=0 );
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		font-size: 15px;
+		line-height: 20px;
+		color: #C4C4C4;
+		font-weight: bold;
+		font-family: 'PT Serif', serif;
+		margin: 0;
+		padding: 0;
+		&.for{
+			color: #FFFFFF;
+			font-size: 30px;
+			line-height: 32px;
+		}
+	}
+	&__anons{
+		font-size: 16px;
+		line-height: 25px;
+		color: #FFFFFF;
+		margin: 0;
+		padding: 0;
+	}
+}

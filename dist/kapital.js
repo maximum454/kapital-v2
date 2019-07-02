@@ -86,6 +86,36 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/flexboxgrid/dist/flexboxgrid.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/flexboxgrid/dist/flexboxgrid.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../mini-css-extract-plugin/dist/loader.js!../../css-loader/dist/cjs.js!../../postcss-loader/src!../../sass-loader/lib/loader.js!./flexboxgrid.css */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -10696,6 +10726,17 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./src/kapital.scss":
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/lib/loader.js!./src/kapital.scss ***!
@@ -14136,6 +14177,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
+__webpack_require__(/*! flexboxgrid */ "./node_modules/flexboxgrid/dist/flexboxgrid.css");
+
 __webpack_require__(/*! ./kapital.scss */ "./src/kapital.scss");
 
 __webpack_require__(/*! ./js/slick */ "./src/js/slick.js");
@@ -14171,42 +14214,24 @@ $('.js-project').slick({
     slidesToShow: 1,
     slidesToScroll: 1
 });
-/*
-function responseMenu() {
-    $('navbar__dropdown .nav-item').appendTo('.navbar-nav');
-    var items = $('.navbar-nav .nav-item');
-    var max_width = $('.navbar-nav').width() - $('.navbar__dd').outerWidth();
-    var width = 0;
-    var hide_from = 0;
-    console.log('len'+items.length);
-    items.css({'width': 'auto'});
-    items.each(function (index) {
-        if (width + $(this).outerWidth() > max_width) {
-            return false;
-        } else {
-            hide_from = index;
-            width += $(this).outerWidth();
-        }
-    });
-    if (hide_from < items.length - 1) {
-        items.eq(hide_from).nextAll('.nav-item').appendTo('.navbar__dropdown');
-        items.css({'width': (max_width / (hide_from + 1)) + 'px'});
-        $('.navbar__dd').show();
-    } else {
-        $('.navbar__dd').hide();
-    }
-}
 
-
-$(function () {
-    $('.navbar').on('click', '.navbar__toggle', function () {
-        $('.navbar__dropdown').toggle();
-    });
-
-    $(window).on('resize', function(){
-        responseMenu();
-    }).trigger('resize');
-});*/
+$('.js-slider-events-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.js-slider-events-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    vertical: true,
+    dots: false,
+    arrow: false,
+    centerMode: false,
+    focusOnSelect: false
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

@@ -1,18 +1,10 @@
 .header{
-	width: 1120px;
+	width: 1160px;
 	height: 80px;
 	margin: 10px auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	&__title{
-		font-size: 11px;
-		line-height: 14px;
-		font-weight: bold;
-		text-transform: uppercase;
-		letter-spacing: 2.9px;
-		margin: 5px 0 0;
-	}
 	&__logo{
 		display: flex;
 		flex-direction: column;

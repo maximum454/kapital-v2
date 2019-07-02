@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "flexboxgrid": "^6.3.1",
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.15"
   },

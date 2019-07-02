@@ -1,14 +1,12 @@
 .current {
-	width: calc(100% + 30px);
-	margin-left: -15px;
+	width: 100%;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	background-color: rgba(#939393, .2);
 	&__inner{
 		display: flex;
-		width: 1120px;
+		width: 1160px;
 		margin: 0 auto;
-		padding: 0 15px;
 	}
 	&__box{
 		width: 100%;
