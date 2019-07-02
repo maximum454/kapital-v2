@@ -1,4 +1,4 @@
-import 'flexboxgrid'
+//import 'flexboxgrid'
 import './kapital.scss'
 import './js/slick'
 

@@ -86,36 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/flexboxgrid/dist/flexboxgrid.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/flexboxgrid/dist/flexboxgrid.css ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../mini-css-extract-plugin/dist/loader.js!../../css-loader/dist/cjs.js!../../postcss-loader/src!../../sass-loader/lib/loader.js!./flexboxgrid.css */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -10726,17 +10696,6 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/lib/loader.js!./node_modules/flexboxgrid/dist/flexboxgrid.css ***!
-  \******************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./src/kapital.scss":
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/src!./node_modules/sass-loader/lib/loader.js!./src/kapital.scss ***!
@@ -14177,8 +14136,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(/*! flexboxgrid */ "./node_modules/flexboxgrid/dist/flexboxgrid.css");
-
 __webpack_require__(/*! ./kapital.scss */ "./src/kapital.scss");
 
 __webpack_require__(/*! ./js/slick */ "./src/js/slick.js");
@@ -14215,7 +14172,8 @@ $('.js-project').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
-});
+}); //import 'flexboxgrid'
+
 
 $('.js-slider-events-for').slick({
     slidesToShow: 1,
