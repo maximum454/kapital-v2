@@ -29,16 +29,17 @@ $('.js-slider-events-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav'
+    fade: false,
+    vertical: true,
+    asNavFor: '.slider-events__nav'
 });
 $('.js-slider-events-nav').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
-    asNavFor: '.slider-for',
+    asNavFor: '.slider-events__for',
     vertical: true,
     dots: false,
-    arrow: false,
+    arrows: false,
     centerMode: false,
-    focusOnSelect: false
+    focusOnSelect: true
 });
