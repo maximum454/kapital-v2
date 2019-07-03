@@ -90,11 +90,16 @@
 		background-repeat: no-repeat;
 		padding-left: 12px;
 	}
+	&__footer{
+		position: relative;
+		left: 1px;
+		padding: 20px;
+		border-right: 1px solid #fff;
+	}
 	&__btn{
 		display: block;
-		margin-top: 20px;
 		margin-left: auto;
-		margin-right: 51px;
+		margin-right: 31px;
 		background-color:#00B25D;
 		width: 244px;
 		height: 40px;
