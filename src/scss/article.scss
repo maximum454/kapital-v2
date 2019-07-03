@@ -1,6 +1,6 @@
 .article {
 	padding: 38px 98px 0;
-
+	margin-bottom: 115px;
 	&__rubric {
 		font-size: 24px;
 		font-weight: 900;
@@ -62,15 +62,64 @@
 	}
 
 	&__img {
-
+		margin-bottom: 15px;
+		position: relative;
 		img {
 			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
-	}
+		&.play{
+			&:before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				background-image: url("img/media-IconVideo.svg");
+				background-size: 80px;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 80px;
+				height: 80px;
+			}
 
+		}
+	}
+	&__caption{
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 33px;
+	}
+	&__caption-title{
+		position: relative;
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 6px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -20px;
+			background-color: #00B25D;
+			width: 4px;
+			height: 100%;
+		}
+	}
+	&__source{
+		position: relative;
+		font-size: 13px;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -20px;
+			background-color: #404040;
+			width: 4px;
+			height: 100%;
+		}
+	}
 	h3 {
 		font-family: 'PT Serif', serif;
 		font-size: 36px;
@@ -122,5 +171,25 @@
 		p {
 			margin: 0;
 		}
+	}
+	&__tag{
+		position: relative;
+		background-image: url("img/tag-Icon.svg");
+		background-position: center left;
+		background-repeat: no-repeat;
+		background-size: 27px 14px;
+		padding-left: 37px;
+		margin-bottom: 20px;
+	}
+	&__link{
+		color: #007443;
+		font-size: 15px;
+		line-height: 20px;
+		text-decoration: underline;
+		padding-right: 10px;
+	}
+	&__txt{
+		font-size: 12px;
+		line-height: 18px;
 	}
 }
