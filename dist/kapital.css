@@ -66,6 +66,9 @@ a {
     height: 14px;
     overflow: hidden; }
 
+.pt-0 {
+  padding-top: 0; }
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     -webkit-transition: none;
