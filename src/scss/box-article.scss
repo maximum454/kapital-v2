@@ -1,5 +1,8 @@
 .box-article{
 	margin-bottom: 20px;
+	&:last-of-type{
+		margin-bottom: 0;
+	}
 	&.gorizont{
 		.box-article__left{
 			display: inline-grid;

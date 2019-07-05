@@ -673,6 +673,8 @@ a {
 
 .box-article {
   margin-bottom: 20px; }
+  .box-article:last-of-type {
+    margin-bottom: 0; }
   .box-article.gorizont .box-article__left {
     display: inline-grid;
     grid-template-columns: 550px;
