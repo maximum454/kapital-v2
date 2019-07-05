@@ -1,15 +1,106 @@
-.media-2{
-	display: grid;
-	grid-template-columns: 550px 295px;
-	grid-template-rows: auto;
-	grid-template-areas:
-			"header header"
-			"main aside"
-			"footer footer"
-				;
+.box-article{
 	margin-bottom: 20px;
-	&:last-of-type{
-		margin-bottom: 0;
+	&.gorizont{
+		.box-article__left{
+			display: inline-grid;
+			grid-template-columns: 550px;
+			grid-template-rows: auto;
+			grid-template-areas: "item";
+			.box-article__item{
+				grid-area: auto;
+				display: inline-grid;
+				grid-template-columns: 155px 375px;
+				grid-template-rows: 113px;
+				grid-template-areas: "img txt";
+				padding: 20px 0;
+				&:first-of-type{
+					grid-template-columns: 1fr;
+					grid-template-rows: 280px 129px;
+					grid-row-gap: 12px;
+					grid-template-areas: "img"
+					"txt";
+				}
+			}
+		}
+	}
+	&.vertical{
+		.box-article__left{
+			display: inline-grid;
+			grid-template-columns: 275px 275px;
+			grid-template-rows: auto;
+			grid-template-areas: initial;
+			.box-article__item{
+				grid-area: auto;
+				grid-template-columns: 255px;
+				grid-template-rows: 190px 195px;
+				grid-row-gap: 36px;
+				grid-template-areas: "img"
+				"txt";
+				margin: 0 auto;
+				&:first-of-type{
+					grid-template-columns: 1fr;
+					grid-template-rows: 280px 129px;
+					grid-column: 1 / 3;
+					grid-row: 1 /4;
+					grid-row-gap: 12px;
+				}
+			}
+		}
+		.box-article__right{
+			grid-template-rows: auto;
+			grid-template-areas: "item";
+			.box-article__item{
+				grid-template-rows: 190px;
+				grid-template-areas: "txt";
+				&:last-of-type{
+					grid-area: auto;
+					grid-template-columns: 255px;
+					grid-template-rows: 190px 195px;
+					grid-row-gap: 36px;
+					grid-template-areas: "img"
+					"txt";
+					margin: 0 auto;
+				}
+
+			}
+		}
+	}
+	//стандарт
+	&__main{
+		display: grid;
+		grid-template-columns: 570px 295px;
+		grid-template-rows: auto;
+		grid-template-areas: "left right";
+	}
+	&__left{
+		grid-area: left;
+		border-right: 1px solid #dddddd;
+	}
+	&__right{
+		grid-area: right;
+		display: inline-grid;
+		grid-template-columns: 295px;
+		grid-template-rows: auto;
+		grid-template-areas: "item";
+		.box-article__item{
+			grid-area: auto;
+			grid-template-columns: 255px;
+			grid-template-rows: 190px 195px;
+			grid-row-gap: 36px;
+			grid-template-areas: "img"
+			"txt";
+			margin: 0 auto;
+		}
+	}
+	&__item{
+		grid-area: item;
+		display: inline-grid;
+		grid-template-columns: 275px 255px;
+		grid-template-rows: 190px;
+		grid-column-gap: 20px;
+		grid-template-areas: "img txt";
+		padding: 20px 0;
+		border-bottom: 1px solid #dddddd;
 	}
 	&__header{
 		grid-area: header;
@@ -39,78 +130,6 @@
 	&__footer{
 		grid-area: footer;
 	}
-	&__main{
-		grid-area: main;
-		border-right: 1px solid #DDDDDD;
-		display: inline-grid;
-		padding-top: 20px;
-		padding-right: 9px;
-		grid-template-columns: 285px 285px;
-		grid-template-rows: auto;
-		grid-template-areas: "big big"
-							 "big big"
-							 "middle middle";
-	}
-	&__aside{
-		grid-area: aside;
-		display: inline-grid;
-		grid-row-gap: 20px;
-		padding-top: 20px;
-		grid-template-columns: 295px;
-		grid-template-rows: 230px 230px 460px;
-		grid-template-areas: "small"
-							"small"
-							"middle";
-	}
-	&__item{
-		display: grid;
-		grid-column-gap: 20px;
-		margin: 0 9px;
-		padding:0 11px 20px;
-		grid-template-columns: 1fr;
-		grid-template-rows: 190px 195px;
-		grid-row-gap: 36px;
-		grid-template-areas: "img"
-							"content";
-		position: relative;
-		&:after{
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 98%;
-			margin: 0 auto;
-			border-bottom: 1px solid #DDDDDD;
-		}
-		&.big{
-			margin: 0 9px 0 0;
-			padding:0 11px 0 0;
-			grid-area: big;
-			grid-template-rows: 280px 149px;
-			grid-row-gap: 12px;
-			.media-2__name{
-				font-size: 24px;
-				line-height: 28px;
-			}
-		}
-		&.middle{
-			border-right: 1px solid #DDDDDD;
-			margin: 0 18px 0 0;
-			padding: 20px 11px 20px 0;
-			&:last-of-type{
-				border-right: none;
-			}
-		}
-		&.small{
-			padding: 0;
-			margin: 0;
-			grid-template-rows: 230px;
-			grid-template-areas: "content";
-			.media-2__txt{
-				padding-bottom: 20px;
-			}
-		}
-	}
 	&__img {
 		grid-area: img;
 		background-color: #ffd8a8;
@@ -131,7 +150,7 @@
 		}
 	}
 	&__txt {
-		grid-area: content;
+		grid-area: txt;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -214,8 +233,5 @@
 		&:hover{
 			text-decoration: none;
 		}
-	}
-	.pt-0{
-		padding-top: 0;
 	}
 }
