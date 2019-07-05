@@ -2,13 +2,13 @@
 	background-color: #404040;
 	display: flex;
 	margin-bottom: 20px;
-	margin-right: 20px;
+	width: 845px;
 	height: 550px;
 	overflow: hidden;
 
 	&__for {
 		width: 100%;
-		max-width: 570px;
+		max-width: 550px;
 		flex-shrink: 0;
 
 		.slider-events__info {

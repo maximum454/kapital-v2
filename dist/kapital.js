@@ -11216,14 +11216,14 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./src/img/Adv-02.png":
+/***/ "./src/img/Adv-02.jpg":
 /*!****************************!*\
-  !*** ./src/img/Adv-02.png ***!
+  !*** ./src/img/Adv-02.jpg ***!
   \****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/Adv-02.png";
+module.exports = __webpack_require__.p + "img/Adv-02.jpg";
 
 /***/ }),
 
@@ -14148,7 +14148,7 @@ __webpack_require__(/*! ./img/Rectangle2.1.png */ "./src/img/Rectangle2.1.png");
 
 __webpack_require__(/*! ./img/Rectangle2.2.png */ "./src/img/Rectangle2.2.png");
 
-__webpack_require__(/*! ./img/Adv-02.png */ "./src/img/Adv-02.png");
+__webpack_require__(/*! ./img/Adv-02.jpg */ "./src/img/Adv-02.jpg");
 
 __webpack_require__(/*! ./img/projects-1.jpg */ "./src/img/projects-1.jpg");
 

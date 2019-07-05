@@ -1,6 +1,6 @@
 .media-2{
 	display: grid;
-	grid-template-columns: 570px 295px;
+	grid-template-columns: 550px 295px;
 	grid-template-rows: auto;
 	grid-template-areas:
 			"header header"
@@ -8,7 +8,6 @@
 			"footer footer"
 				;
 	margin-bottom: 20px;
-	grid-column-gap: 20px;
 	&:last-of-type{
 		margin-bottom: 0;
 	}
