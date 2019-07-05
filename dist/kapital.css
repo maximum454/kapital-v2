@@ -454,6 +454,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  margin-right: 20px;
   height: 550px;
   overflow: hidden; }
   .slider-events__for {
@@ -469,7 +470,8 @@ a {
       margin-bottom: 0; }
     .slider-events__for .slider-events__item {
       padding: 0;
-      border: none; }
+      border-right: 1px solid #626262;
+      border-bottom: none; }
     .slider-events__for .slider-events__img {
       height: 360px;
       margin-bottom: 9px;
@@ -487,15 +489,24 @@ a {
       color: #FFFFFF;
       font-size: 30px;
       line-height: 32px;
-      margin-bottom: 20px; }
-      .slider-events__for .slider-events__name:hover {
-        color: #00B35D; }
+      margin-bottom: 13px;
+      position: relative; }
+      .slider-events__for .slider-events__name:hover:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        border-bottom: 3px solid #00B35D; }
+    .slider-events__for .slick-slide {
+      border: none; }
   .slider-events__nav {
     width: 100%; }
     .slider-events__nav .slick-slide {
       margin: 0 10px 0 20px;
       border-bottom: 1px solid #00B35D;
-      outline: none; }
+      outline: none;
+      height: 110px; }
       .slider-events__nav .slick-slide:last-of-type {
         border: none; }
     .slider-events__nav .slick-current {
@@ -505,29 +516,22 @@ a {
         position: absolute;
         top: 0;
         left: -21px;
-        width: 5px;
+        width: 10px;
         height: 100%;
         background-color: #00B25D; }
-  .slider-events .slick-vertical .slick-slide {
-    border: none; }
-  .slider-events__item {
-    display: block;
-    text-decoration: none;
-    border-bottom: 1px solid #00B35D;
-    padding: 16px 0;
-    cursor: pointer; }
-    .slider-events__item:last-of-type {
-      border: none; }
+      .slider-events__nav .slick-current .slider-events__name {
+        color: #fff; }
+    .slider-events__nav .slider-events__item {
+      display: block;
+      text-decoration: none;
+      padding: 9px 0 16px;
+      cursor: pointer; }
   .slider-events__link {
     display: block;
     text-decoration: none;
     padding: 0 40px; }
     .slider-events__link:hover {
-      color: #00B35D;
       text-decoration: none; }
-      .slider-events__link:hover * {
-        color: #00B35D;
-        text-decoration: none; }
   .slider-events__info {
     display: -webkit-box;
     display: -ms-flexbox;
