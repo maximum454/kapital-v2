@@ -14183,6 +14183,7 @@ $('.js-slider-events-for').slick({
     vertical: true,
     asNavFor: '.slider-events__nav'
 });
+
 $('.js-slider-events-nav').slick({
     slidesToShow: 5,
     slidesToScroll: 1,

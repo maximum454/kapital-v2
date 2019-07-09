@@ -5,7 +5,122 @@
 	width: 845px;
 	height: 550px;
 	overflow: hidden;
+	&.light{
+		width: 865px;
+		background-color: transparent;
+		border-bottom: 1px solid #dddddd;
+		.slider-events__for{
+			max-width: 570px;
+			.slider-events__name{
+				color: #404040;
+			}
+			.slider-events__anons{
+				color: #404040;
+			}
+			.slider-events__item {
+				padding-right: 20px;
+				border-right: 1px solid #dddddd;
+			}
+		}
+		.slider-events__nav{
+			.slider-events__name{
+				color: #404040;
+			}
+			.slick-slide {
 
+				border-bottom: 1px solid #dddddd;
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+	}
+	&.preview{
+		width: 865px;
+		background-color: transparent;
+		border-bottom: 1px solid #dddddd;
+		.slider-events__for{
+
+			width: 100%;
+			max-width: 373px;
+			.slider-events__img{
+				height: 236px;
+				.slider-events__info{
+					display: none;
+				}
+			}
+			.slider-events__link{
+				padding: 0;
+			}
+			.slider-events__name{
+				font-size: 28px;
+				line-height: 30px;
+				color: #404040;
+			}
+			.slider-events__anons{
+				color: #404040;
+				font-size: 16px;
+				line-height: 21px;
+			}
+			.slider-events__item {
+				padding-right: 0;
+				border-right: none;
+				height: 100%;
+			}
+			.slider-events__info {
+				position: relative;
+				bottom: 0;
+				left: 0;
+				margin-bottom: 10px;
+			}
+			.slider-events__date {
+				color: #404040;
+			}
+
+			.slider-events__view {
+				color: #404040;
+				background-image: url("img/view.svg");
+			}
+		}
+		.slider-events__nav{
+			.slider-events__item{
+				display: grid!important;
+				grid-template-columns: 187px 255px;
+				grid-template-rows: 120px;
+				grid-column-gap: 10px;
+				grid-template-areas: "img txt";
+				padding: 8px 0;
+			}
+			.slider-events__img {
+				display: block;
+				grid-area: img;
+				width: 100%;
+				background: transparent;
+			}
+			.slider-events__txt {
+				grid-area: txt;
+			}
+			.slider-events__name{
+				color: #404040;
+			}
+			.slick-slide {
+				height: auto;
+				border-bottom: 1px solid #dddddd;
+				&:last-of-type {
+					border: none;
+				}
+			}
+			.slick-current {
+				position: relative;
+				&:before {
+					display: none;
+				}
+				.slider-events__name{
+					color: #404040;
+				}
+			}
+		}
+	}
 	&__for {
 		width: 100%;
 		max-width: 550px;
@@ -103,6 +218,9 @@
 			padding: 9px 0 16px;
 			cursor: pointer;
 		}
+		.slider-events__img{
+			display: none;
+		}
 	}
 
 	&__link {
@@ -125,6 +243,8 @@
 	}
 
 	&__rubric {
+		display: block;
+		text-decoration: none;
 		color: #00B35D;
 		font-size: 14px;
 		margin-right: 12px;
