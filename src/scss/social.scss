@@ -1,39 +1,42 @@
 .social{
 	display: flex;
 	align-items: flex-end;
+	&.sticky{
+		position: sticky;
+		top: 20px;
+	}
 	&__item{
-		display: inline-block;
 		margin-left: 10px;
+		margin-bottom: 5px;
 		text-decoration: none;
 		background-repeat: no-repeat;
 		background-size: 100%;
-		&:first-child{
-			margin-left: 0;
+		width: 26px;
+		height: 26px;
+		&.fb{
+			background-image: url("img/facebook-square.svg");
+		}
+		&.twitter{
+			background-image: url("img/twitter-square.svg");
 		}
 		&.telegram{
-			background-image: url("img/telegram.svg");
-			width: 21px;
-			height: 21px;
+			background-image: url("img/telegram-square.svg");
 		}
-		&.youtube{
-			background-image: url("img/youtube.svg");
-			width: 30px;
-			height: 21px;
-		}
-		&.fb{
-			background-image: url("img/fb.svg");
-			width: 21px;
-			height: 21px;
+		&.whatsapp{
+			background-image: url("img/whatsapp-square.svg");
 		}
 		&.vk{
-			background-image: url("img/vk.svg");
-			width: 33px;
-			height: 21px;
+			background-image: url("img/vkontakte-square.svg");
 		}
 		&.inst{
-			background-image: url("img/instagram.svg");
-			width: 21px;
-			height: 21px;
+			background-image: url("img/instagram-square.svg");
 		}
+		&.youtube{
+			background-image: url("img/youtube-square.svg");
+		}
+	}
+	&.sticky{
+		position: sticky;
+		flex-direction: column;
 	}
 }

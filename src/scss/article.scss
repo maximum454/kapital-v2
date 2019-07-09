@@ -1,4 +1,5 @@
 .article {
+	position: relative;
 	padding: 38px 98px 0;
 	margin-bottom: 115px;
 	&__rubric {
@@ -191,5 +192,15 @@
 	&__txt{
 		font-size: 12px;
 		line-height: 18px;
+	}
+	&__social{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		.social{
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 }

@@ -683,34 +683,39 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end; }
+  .social.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px; }
   .social__item {
-    display: inline-block;
     margin-left: 10px;
+    margin-bottom: 5px;
     text-decoration: none;
     background-repeat: no-repeat;
-    background-size: 100%; }
-    .social__item:first-child {
-      margin-left: 0; }
-    .social__item.telegram {
-      background-image: url(img/telegram.svg);
-      width: 21px;
-      height: 21px; }
-    .social__item.youtube {
-      background-image: url(img/youtube.svg);
-      width: 30px;
-      height: 21px; }
+    background-size: 100%;
+    width: 26px;
+    height: 26px; }
     .social__item.fb {
-      background-image: url(img/fb.svg);
-      width: 21px;
-      height: 21px; }
+      background-image: url(img/facebook-square.svg); }
+    .social__item.twitter {
+      background-image: url(img/twitter-square.svg); }
+    .social__item.telegram {
+      background-image: url(img/telegram-square.svg); }
+    .social__item.whatsapp {
+      background-image: url(img/whatsapp-square.svg); }
     .social__item.vk {
-      background-image: url(img/vk.svg);
-      width: 33px;
-      height: 21px; }
+      background-image: url(img/vkontakte-square.svg); }
     .social__item.inst {
-      background-image: url(img/instagram.svg);
-      width: 21px;
-      height: 21px; }
+      background-image: url(img/instagram-square.svg); }
+    .social__item.youtube {
+      background-image: url(img/youtube-square.svg); }
+  .social.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 .search {
   display: -webkit-box;
@@ -964,6 +969,7 @@ a {
       text-decoration: none; }
 
 .article {
+  position: relative;
   padding: 38px 98px 0;
   margin-bottom: 115px; }
   .article__rubric {
@@ -1128,6 +1134,19 @@ a {
   .article__txt {
     font-size: 12px;
     line-height: 18px; }
+  .article__social {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+    .article__social .social {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
 
 .similar__title {
   padding-left: 98px;
