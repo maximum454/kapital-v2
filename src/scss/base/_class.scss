@@ -112,6 +112,9 @@ a {
 }
 .banner-a1{
 	text-align: center;
+	img{
+		max-width: 100%;
+	}
 }
 .banner{
 	width: 100%;
@@ -165,6 +168,11 @@ a {
 		color: #fff;
 		font-size: 18px;
 		margin: 0;
+	}
+}
+@include r(768){
+	.banner-project{
+		display: none;
 	}
 }
 

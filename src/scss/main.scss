@@ -1,5 +1,6 @@
 .main {
-	width: 1160px;
+	max-width: 1160px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 20px 0;
 	display: grid;
@@ -8,12 +9,17 @@
 	grid-column-gap: 20px;
 	grid-template-areas:
 			"contant aside";
-	display: none;
 	&__contant{
 		grid-area: contant;
 		border-right: 1px solid #DDDDDD;
 	}
 	&__aside{
 		grid-area: aside;
+	}
+	@include r(768){
+		display: block;
+		&__aside{
+			padding: 0 10px;
+		}
 	}
 }

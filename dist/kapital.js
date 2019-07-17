@@ -14178,10 +14178,19 @@ $('.js-project').slick({
 $('.js-slider-events-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    dots: false,
     arrows: false,
     fade: false,
     vertical: true,
-    asNavFor: '.slider-events__nav'
+    asNavFor: '.slider-events__nav',
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            dots: true,
+            asNavFor: null,
+            vertical: false
+        }
+    }]
 });
 
 $('.js-slider-events-nav').slick({
@@ -14192,7 +14201,11 @@ $('.js-slider-events-nav').slick({
     dots: false,
     arrows: false,
     centerMode: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [{
+        breakpoint: 768,
+        settings: "unslick"
+    }]
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
