@@ -39,4 +39,7 @@
 		position: sticky;
 		flex-direction: column;
 	}
+	@include r(768){
+		justify-content: center;
+	}
 }

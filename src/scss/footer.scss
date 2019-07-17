@@ -10,7 +10,6 @@
 	grid-row-gap: 12px;
 	grid-template-areas: "logo nav social"
 							"logo txt txt";
-	display: none;
 	img{
 		max-width: 100%;
 	}
@@ -39,7 +38,6 @@
 		grid-area: social;
 	}
 	.nav-link{
-
 		font-style: normal;
 		font-weight: normal;
 		font-size: 13px;
@@ -58,6 +56,20 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+		}
+	}
+	@include r(768){
+		text-align: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-column-gap: 20px;
+		grid-row-gap: 12px;
+		grid-template-areas: "logo"
+		"nav"
+		"txt"
+		"social";
+		&__copy{
+			margin-top: 0;
 		}
 	}
 }
