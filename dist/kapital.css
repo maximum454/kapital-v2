@@ -831,7 +831,9 @@ a {
     .social {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; } }
+              justify-content: center; }
+      .social__item {
+        margin-left: 0; } }
 
 .search {
   display: -webkit-box;
@@ -1362,6 +1364,61 @@ a {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
+  @media only screen and (max-width: 768px) {
+    .article {
+      padding: 0 36px 0;
+      margin-bottom: 30px; }
+      .article__title {
+        color: #404040;
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: bold;
+        font-family: 'PT Serif', serif;
+        margin: 0 0 20px; }
+      .article__subtitle {
+        color: #404040;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: normal;
+        margin: 0 0 20px; }
+      .article__blockquote {
+        width: 100%;
+        padding: 15px 0;
+        margin: 0 auto 20px;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: left; }
+        .article__blockquote:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+                  transform: translate(-50%, 0);
+          background-image: none;
+          background-color: #00B25D;
+          width: 90%;
+          height: 1px; }
+        .article__blockquote:after {
+          content: '';
+          position: absolute;
+          top: auto;
+          bottom: 0;
+          right: 50%;
+          -webkit-transform: translate(50%, 0);
+                  transform: translate(50%, 0);
+          background-image: none;
+          background-color: #00B25D;
+          width: 90%;
+          height: 1px; }
+        .article__blockquote p {
+          font-size: 16px;
+          margin: 0; }
+      .article h3 {
+        font-family: 'PT Serif', serif;
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0 0 20px; } }
 
 .similar__title {
   padding-left: 98px;
