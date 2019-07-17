@@ -18,6 +18,10 @@
 	}
 	@include r(768){
 		display: block;
+		&__contant{
+			grid-area: contant;
+			border-right: none;
+		}
 		&__aside{
 			padding: 0 10px;
 		}

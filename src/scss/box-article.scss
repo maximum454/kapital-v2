@@ -1,6 +1,5 @@
 .box-article{
 	margin-bottom: 20px;
-	display: none;
 	&:last-of-type{
 		margin-bottom: 0;
 	}
@@ -162,11 +161,13 @@
 
 	}
 	&__rubric{
+		grid-area: rubric;
 		font-size: 15px;
 		line-height: 18px;
 		color: #007443;
 	}
 	&__link{
+		grid-area: link;
 		text-decoration: none;
 		color: inherit;
 		&:hover{
@@ -191,6 +192,7 @@
 		margin: 0;
 	}
 	&__info{
+		grid-area: info;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -236,6 +238,110 @@
 		}
 		&:hover{
 			text-decoration: none;
+		}
+	}
+	@include r(768){
+		padding: 0 10px;
+		&.gorizont{
+			.box-article__left{
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				.box-article__item{
+					grid-template-columns: 1fr;
+					grid-template-rows: auto;
+					grid-template-areas: "img" "txt";
+				}
+			}
+		}
+		&.vertical{
+			.box-article__left{
+				display: inline-grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas: initial;
+				.box-article__item{
+					grid-area: auto;
+					grid-template-columns: 1fr;
+					grid-template-rows: auto;
+					grid-row-gap: 0;
+					grid-template-areas: "img"
+					"txt";
+					margin: 0 auto;
+					&:first-of-type{
+						grid-template-columns: 1fr;
+						grid-template-rows: 1fr;
+						grid-column: 1 / 2;
+						grid-row: 1 /3;
+						grid-row-gap: 12px;
+					}
+				}
+			}
+			.box-article__right{
+				grid-template-rows: auto;
+				grid-template-areas: "item";
+				.box-article__item{
+					grid-template-rows: auto;
+					grid-template-areas: "txt";
+					grid-row-gap: 0;
+					&:last-of-type{
+						grid-area: auto;
+						grid-template-columns: 1fr;
+						grid-template-rows: auto;
+						grid-row-gap: 0;
+						grid-template-areas: "img"
+						"txt";
+						margin: 0 auto;
+					}
+
+				}
+			}
+		}
+		&__main{
+			grid-template-columns: 1fr;
+			grid-template-areas: "left" "right";
+		}
+		&__left{
+			border-right: none;
+			margin-bottom: 20px;
+		}
+		&__right{
+			grid-area: right;
+			display: inline-grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: "item";
+			.box-article__item{
+				grid-area: auto;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
+				grid-row-gap: 0;
+				grid-template-areas: "img"
+				"txt";
+				margin: 0 auto;
+			}
+		}
+		&__item{
+			grid-area: item;
+			display: inline-grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 190px;
+			grid-column-gap: 0;
+			grid-template-areas: "img" "txt";
+			padding: 20px 0;
+		}
+		&__img {
+			margin-bottom: 8px;
+		}
+		&__txt {
+			padding-right: 0;
+			display: inline-grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: "rubric info"
+								"link link";
+		}
+		&__btn{
+			margin: 0 auto;
 		}
 	}
 }

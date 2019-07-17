@@ -418,7 +418,9 @@
 		height: 100%;
 		&__for {
 			max-width: 100%;
-
+			.slider-events__item {
+				border-right: none;
+			}
 			.slider-events__img {
 				height: 100%;
 			}
