@@ -798,6 +798,10 @@ a {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+      .slider-events__title {
+        font-size: 18px;
+        color: #404040;
+        margin: 0 14px 0 0; }
       .slider-events__for {
         max-width: 100%; }
         .slider-events__for .slider-events__item {
@@ -814,7 +818,9 @@ a {
         font-size: 12px;
         line-height: 18px; }
       .slider-events__link {
-        padding: 0 10px; } }
+        padding: 0 10px; }
+      .slider-events__date--header {
+        font-size: 14px; } }
 
 .social {
   display: -webkit-box;

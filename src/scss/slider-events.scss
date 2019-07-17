@@ -436,6 +436,11 @@
 			align-items: center;
 			justify-content: space-between;
 		}
+		&__title{
+			font-size: 18px;
+			color: #404040;
+			margin: 0 14px 0 0 ;
+		}
 		&__for {
 			max-width: 100%;
 			.slider-events__item {
@@ -451,6 +456,7 @@
 				margin-bottom: 10px;
 			}
 		}
+
 		&__nav {
 			display: none;
 		}
@@ -460,6 +466,11 @@
 		}
 		&__link {
 			padding: 0 10px;
+		}
+		&__date {
+			&--header{
+				font-size: 14px;
+			}
 		}
 	}
 }
