@@ -1,5 +1,6 @@
 .header{
-	width: 1160px;
+	width: 100%;
+	max-width: 1160px;
 	margin: 20px auto;
 	display: grid;
 	grid-template-columns: 236px 1fr 270px;
@@ -67,20 +68,30 @@
 		}
 	}
 	&__social{
-		height: 100%;
-		align-self: flex-end;
-		padding-bottom: 10px;
-		padding-left: 18px;
-		margin-left: 20px;
-		position: relative;
-		&:before{
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: #DDDDDD;
-			width: 1px;
-			height: 100%;
+
+	}
+	@include r(768){
+		grid-template-columns: 40px 1fr;
+		grid-template-rows: auto;
+		grid-column-gap: 0;
+		grid-template-areas: 'search logo';
+		padding: 0 15px;
+		&__logo{
+			align-items: center;
+			padding-right: 0;
+			border-right: none;
+			justify-content: center;
+			margin-left: -40px;
+			img{
+				max-width: 120px;
+			}
 		}
+		&__news{
+			display: none;
+		}
+		&__social{
+			display: none;
+		}
+
 	}
 }

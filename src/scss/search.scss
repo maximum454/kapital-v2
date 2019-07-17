@@ -26,4 +26,14 @@
 		background-color: transparent;
 
 	}
+	@include r(768){
+		margin-bottom: 0;
+		&__input{
+			display: none;
+		}
+		&__submit{
+			width: 30px;
+			height: 32px;
+		}
+	}
 }

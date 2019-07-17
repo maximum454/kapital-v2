@@ -8,6 +8,7 @@
 	grid-column-gap: 20px;
 	grid-template-areas:
 			"contant aside";
+	display: none;
 	&__contant{
 		grid-area: contant;
 		border-right: 1px solid #DDDDDD;

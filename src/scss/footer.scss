@@ -10,6 +10,7 @@
 	grid-row-gap: 12px;
 	grid-template-areas: "logo nav social"
 							"logo txt txt";
+	display: none;
 	img{
 		max-width: 100%;
 	}

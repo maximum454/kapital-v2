@@ -10,6 +10,16 @@ html, body {
   margin: 0;
   padding: 0; }
 
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent; }
+
 .wrp {
   color: #404040; }
 
@@ -231,13 +241,16 @@ a {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 10px;
-  background-color: rgba(147, 147, 147, 0.2); }
+  background-color: rgba(147, 147, 147, 0.2);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
   .current__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 1160px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    overflow: hidden; }
   .current__box {
     width: 100%;
     display: -webkit-box;
@@ -308,7 +321,8 @@ a {
         align-self: flex-end; }
 
 .header {
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   margin: 20px auto;
   display: grid;
   grid-template-columns: 236px 1fr 270px;
@@ -373,32 +387,42 @@ a {
       width: 5px;
       height: 10px;
       overflow: hidden; }
-  .header__social {
-    height: 100%;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    padding-bottom: 10px;
-    padding-left: 18px;
-    margin-left: 20px;
-    position: relative; }
-    .header__social:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #DDDDDD;
-      width: 1px;
-      height: 100%; }
+  @media only screen and (max-width: 768px) {
+    .header {
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 0;
+      grid-template-areas: 'search logo';
+      padding: 0 15px; }
+      .header__logo {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-right: 0;
+        border-right: none;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-left: -40px; }
+        .header__logo img {
+          max-width: 120px; }
+      .header__news {
+        display: none; }
+      .header__social {
+        display: none; } }
 
 .navbar {
   width: 100%;
   max-width: 1160px;
-  padding: 8px 0;
+  padding: 12px 0 0;
   margin: 0 auto;
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
-  position: relative; }
+  position: relative;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
   .navbar .navbar-nav {
+    width: 1160px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -408,11 +432,11 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .navbar .navbar-nav .nav-item {
       display: block;
       white-space: nowrap; }
@@ -745,6 +769,14 @@ a {
     height: 22px;
     border: none;
     background-color: transparent; }
+  @media only screen and (max-width: 768px) {
+    .search {
+      margin-bottom: 0; }
+      .search__input {
+        display: none; }
+      .search__submit {
+        width: 30px;
+        height: 32px; } }
 
 .main {
   width: 1160px;
@@ -754,7 +786,8 @@ a {
   grid-template-columns: 1fr 275px;
   grid-template-rows: auto;
   grid-column-gap: 20px;
-  grid-template-areas: "contant aside"; }
+  grid-template-areas: "contant aside";
+  display: none; }
   .main__contant {
     grid-area: contant;
     border-right: 1px solid #DDDDDD; }
@@ -1524,7 +1557,8 @@ a {
   grid-template-rows: auto;
   grid-column-gap: 20px;
   grid-row-gap: 12px;
-  grid-template-areas: "logo nav social" "logo txt txt"; }
+  grid-template-areas: "logo nav social" "logo txt txt";
+  display: none; }
   .footer img {
     max-width: 100%; }
   .footer__logo {

@@ -3,10 +3,13 @@
 	margin-top: 20px;
 	margin-bottom: 10px;
 	background-color: rgba(#939393, .2);
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
 	&__inner{
 		display: flex;
 		width: 1160px;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 	&__box{
 		width: 100%;
