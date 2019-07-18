@@ -18,11 +18,17 @@
 		border-left: 1px solid #DDDDDD;
 		border-right: 1px solid #DDDDDD;
 	}
+	@include r(1160){
+		&__contant{
+			margin-left: 20px;
+		}
+	}
 	@include r(768){
 		display: block;
 		&__contant{
 			grid-area: contant;
 			border-right: none;
+			margin-left: 10px;
 		}
 		&__aside{
 			padding: 0 10px;

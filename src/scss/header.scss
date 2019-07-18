@@ -70,6 +70,9 @@
 	&__social{
 
 	}
+	@include r(1160){
+		padding: 0 20px;
+	}
 	@include r(768){
 		grid-template-columns: 40px 1fr;
 		grid-template-rows: auto;

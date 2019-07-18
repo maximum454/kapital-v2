@@ -4,7 +4,7 @@
 	padding: 13px 0 35px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 177px 1fr 177px;
+	grid-template-columns: 177px 1fr 224px;
 	grid-template-rows: auto;
 	grid-column-gap: 20px;
 	grid-row-gap: 12px;
@@ -57,6 +57,9 @@
 			top: 0;
 			right: 0;
 		}
+	}
+	@include r(1160){
+		padding:20px;
 	}
 	@include r(768){
 		text-align: center;
