@@ -203,6 +203,46 @@
 			align-items: flex-start;
 		}
 	}
+	@include r(1160){
+		&__blockquote {
+			width: 100%;
+			padding: 15px 0;
+			margin: 0 auto 20px;
+			font-size: 16px;
+			line-height: 21px;
+			text-align: left;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate( -50%, 0);
+				background-image: none;
+				background-color: #00B25D;
+				width: 90%;
+				height: 1px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: auto;
+				bottom: 0;
+				right: 50%;
+				transform: translate(50%, 0);
+				background-image: none;
+				background-color: #00B25D;
+				width: 90%;
+				height: 1px;
+			}
+
+			p {
+				font-size: 16px;
+				margin: 0;
+			}
+		}
+	}
 	@include r(768){
 		padding: 0 36px 0;
 		margin-bottom: 30px;

@@ -1586,6 +1586,40 @@ a {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
+  @media only screen and (max-width: 1160px) {
+    .article__blockquote {
+      width: 100%;
+      padding: 15px 0;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: left; }
+      .article__blockquote:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+        background-image: none;
+        background-color: #00B25D;
+        width: 90%;
+        height: 1px; }
+      .article__blockquote:after {
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        right: 50%;
+        -webkit-transform: translate(50%, 0);
+                transform: translate(50%, 0);
+        background-image: none;
+        background-color: #00B25D;
+        width: 90%;
+        height: 1px; }
+      .article__blockquote p {
+        font-size: 16px;
+        margin: 0; } }
   @media only screen and (max-width: 768px) {
     .article {
       padding: 0 36px 0;

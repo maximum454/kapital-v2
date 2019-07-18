@@ -14134,7 +14134,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($, jQuery) {
 
 __webpack_require__(/*! ./kapital.scss */ "./src/kapital.scss");
 
@@ -14175,42 +14175,78 @@ $('.js-project').slick({
 }); //import 'flexboxgrid'
 
 
-function sliderEvents() {
-    $('.js-slider-events-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        fade: false,
-        vertical: true,
-        asNavFor: '.slider-events__nav',
-        responsive: [{
-            breakpoint: 1060,
-            settings: {
-                dots: true,
-                asNavFor: null,
-                vertical: false
-            }
-        }]
-    });
-    $('.js-slider-events-nav').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '.slider-events__for',
-        vertical: true,
-        dots: false,
-        arrows: false,
-        centerMode: false,
-        focusOnSelect: true,
-        responsive: [{
-            breakpoint: 1060,
-            settings: "unslick"
-        }]
-    });
-}
+$('.js-slider-events-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    fade: false,
+    vertical: true,
+    asNavFor: '.slider-events__nav',
+    responsive: [{
+        breakpoint: 1061,
+        settings: {
+            dots: true,
+            asNavFor: null,
+            vertical: false
+        }
+    }]
+});
+$('.js-slider-events-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.slider-events__for',
+    vertical: true,
+    dots: false,
+    arrows: false,
+    centerMode: false,
+    focusOnSelect: true,
+    responsive: [{
+        breakpoint: 1061,
+        settings: 'unslick'
+    }]
+});
 
-sliderEvents();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+function slickSliderWithResize() {
+    if (jQuery(window).width() < 1160) {
+        $(window).on('resize orientationchange', function () {
+            setTimeout(function () {
+                $('.js-slider-events-for').slick('unslick');
+                $('.js-slider-events-nav').slick('unslick');
+
+                $('.js-slider-events-for').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false,
+                    fade: false,
+                    vertical: true,
+                    asNavFor: '.slider-events__nav',
+                    responsive: [{
+                        breakpoint: 1061,
+                        settings: {
+                            dots: true,
+                            asNavFor: null,
+                            vertical: false
+                        }
+                    }]
+                });
+                $('.js-slider-events-nav').slick({
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider-events__for',
+                    vertical: true,
+                    dots: false,
+                    arrows: false,
+                    centerMode: false,
+                    focusOnSelect: true
+                });
+            }, 100);
+        });
+    }
+}
+slickSliderWithResize();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
