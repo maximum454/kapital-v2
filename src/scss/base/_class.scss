@@ -168,10 +168,18 @@ a {
 		font-size: 18px;
 		margin: 0;
 	}
-}
-@include r(768){
-	.banner-project{
-		display: none;
+	@include r(1160){
+		&__name{
+			font-size: 30px;
+		}
+		&__anons{
+			font-size: 15px;
+		}
+	}
+	@include r(768){
+		.banner-project{
+			display: none;
+		}
 	}
 }
 

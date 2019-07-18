@@ -27,7 +27,8 @@ $('.js-project').slick({
 
 
 
-$('.js-slider-events-for').slick({
+function sliderEvents (){
+    $('.js-slider-events-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
@@ -46,20 +47,23 @@ $('.js-slider-events-for').slick({
         }
     ]
 });
+    $('.js-slider-events-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-events__for',
+        vertical: true,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: "unslick"
+            }
+        ]
+    });
+}
 
-$('.js-slider-events-nav').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.slider-events__for',
-    vertical: true,
-    dots: false,
-    arrows: false,
-    centerMode: false,
-    focusOnSelect: true,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: "unslick"
-        }
-    ]
-});
+
+sliderEvents();

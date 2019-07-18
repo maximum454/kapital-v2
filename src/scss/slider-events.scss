@@ -1,15 +1,14 @@
 .slider-events {
-
 	width: 100%;
 	max-width: 845px;
-	height: 550px;
 	margin-bottom: 20px;
 	overflow: hidden;
+	display: none;
 	&__inner{
 		background-color: #404040;
 		display: flex;
 		&.light {
-			width: 865px;
+			max-width: 865px;
 			background-color: transparent;
 			border-bottom: 1px solid #dddddd;
 
@@ -47,7 +46,7 @@
 		}
 
 		&.preview {
-			width: 865px;
+			max-width: 865px;
 			background-color: transparent;
 			border-bottom: 1px solid #dddddd;
 
@@ -164,8 +163,6 @@
 	&__for {
 		width: 100%;
 		max-width: 550px;
-		flex-shrink: 0;
-
 		.slider-events__info {
 			position: absolute;
 			bottom: 16px;
@@ -183,7 +180,6 @@
 		}
 
 		.slider-events__img {
-			height: 360px;
 			margin-bottom: 9px;
 			position: relative;
 
@@ -228,7 +224,7 @@
 
 	&__nav {
 		width: 100%;
-
+		max-width: 295px;
 		.slick-slide {
 			margin: 0 10px 0 20px;
 			border-bottom: 1px solid #00B35D;
@@ -322,11 +318,6 @@
 		text-decoration: none;
 		width: 100%;
 		position: relative;
-		background: -moz-linear-gradient(top, rgba(64, 64, 64, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-		background: -webkit-linear-gradient(top, rgba(64, 64, 64, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-		background: linear-gradient(to bottom, rgba(64, 64, 64, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00404040', endColorstr='#a6000000', GradientType=0);
-
 		img {
 			width: 100%;
 			height: 100%;

@@ -14175,38 +14175,41 @@ $('.js-project').slick({
 }); //import 'flexboxgrid'
 
 
-$('.js-slider-events-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    fade: false,
-    vertical: true,
-    asNavFor: '.slider-events__nav',
-    responsive: [{
-        breakpoint: 768,
-        settings: {
-            dots: true,
-            asNavFor: null,
-            vertical: false
-        }
-    }]
-});
+function sliderEvents() {
+    $('.js-slider-events-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        fade: false,
+        vertical: true,
+        asNavFor: '.slider-events__nav',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                dots: true,
+                asNavFor: null,
+                vertical: false
+            }
+        }]
+    });
+    $('.js-slider-events-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-events__for',
+        vertical: true,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: "unslick"
+        }]
+    });
+}
 
-$('.js-slider-events-nav').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.slider-events__for',
-    vertical: true,
-    dots: false,
-    arrows: false,
-    centerMode: false,
-    focusOnSelect: true,
-    responsive: [{
-        breakpoint: 768,
-        settings: "unslick"
-    }]
-});
+sliderEvents();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

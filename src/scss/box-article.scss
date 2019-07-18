@@ -240,6 +240,106 @@
 			text-decoration: none;
 		}
 	}
+	@include r(1160){
+		margin-left: 20px;
+		&.gorizont{
+			.box-article__left{
+				display: inline-grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas: "item";
+				.box-article__item{
+					display: inline-grid;
+					grid-template-columns: 275px 1fr;
+					grid-template-rows: 190px;
+					grid-column-gap: 20px;
+					grid-template-areas: "img txt";
+					padding: 20px 0;
+					border-bottom: 1px solid #dddddd;
+					&:first-of-type{
+						grid-template-columns: 1fr;
+						grid-template-rows: 280px 129px;
+						grid-row-gap: 12px;
+						grid-template-areas: "img"
+						"txt";
+					}
+				}
+			}
+		}
+		&.vertical{
+			.box-article__left{
+				display: inline-grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				grid-template-areas: initial;
+				.box-article__item{
+					grid-template-columns: 275px 1fr;
+					grid-template-rows: 190px;
+					grid-row-gap: 20px;
+					grid-template-areas: "img txt";
+					margin: 0 auto;
+					&:first-of-type{
+						grid-template-columns: 1fr;
+						grid-template-rows: 280px 129px;
+						grid-column: 1;
+						grid-row: auto;
+						grid-row-gap: 0;
+						grid-template-areas: "img" "txt";
+					}
+				}
+			}
+			.box-article__right{
+				grid-template-rows: auto;
+				grid-template-areas: "item";
+				.box-article__item{
+					grid-template-columns: 275px 1fr;
+					grid-template-rows: 190px;
+					grid-row-gap: 20px;
+					grid-template-areas: "img txt";
+					&:last-of-type{
+						grid-template-columns: 275px 1fr;
+						grid-template-rows: 190px;
+						grid-row-gap: 20px;
+						grid-template-areas: "img txt";
+					}
+
+				}
+			}
+		}
+		&__main{
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto;
+			grid-template-areas: "left" "right";
+		}
+		&__item{
+			grid-area: item;
+			display: inline-grid;
+			grid-template-columns: 275px 1fr;
+			grid-template-rows: 190px;
+			grid-column-gap: 20px;
+			grid-template-areas: "img txt";
+			padding: 20px 0;
+			border-bottom: 1px solid #dddddd;
+		}
+		&__right{
+			grid-area: right;
+			display: inline-grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: "item";
+			border-right: 1px solid #dddddd;
+			.box-article__item{
+				display: inline-grid;
+				grid-template-columns: 275px 1fr;
+				grid-template-rows: 190px;
+				grid-column-gap: 20px;
+				grid-template-areas: "img txt";
+				padding: 20px 0;
+				border-bottom: 1px solid #dddddd;
+			}
+		}
+	}
 	@include r(768){
 		padding: 0 10px;
 		&.gorizont{
