@@ -14185,7 +14185,7 @@ function sliderEvents() {
         vertical: true,
         asNavFor: '.slider-events__nav',
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 1060,
             settings: {
                 dots: true,
                 asNavFor: null,
@@ -14203,7 +14203,7 @@ function sliderEvents() {
         centerMode: false,
         focusOnSelect: true,
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 1060,
             settings: "unslick"
         }]
     });

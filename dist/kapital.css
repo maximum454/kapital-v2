@@ -509,7 +509,6 @@ a {
   max-width: 845px;
   margin-bottom: 20px;
   overflow: hidden;
-  display: none;
   /* Dots */ }
   .slider-events__inner {
     background-color: #404040;
@@ -803,6 +802,15 @@ a {
     -moz-osx-font-smoothing: grayscale; }
   .slider-events .slick-dots li.slick-active button:before {
     background-color: #00B25D; }
+  @media only screen and (max-width: 1060px) {
+    .slider-events__for {
+      width: 100%;
+      max-width: 100%; }
+      .slider-events__for .slider-events__item {
+        padding: 0;
+        border: none; }
+    .slider-events__nav {
+      display: none; } }
   @media only screen and (max-width: 768px) {
     .slider-events {
       height: 100%; }

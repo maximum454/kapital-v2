@@ -3,7 +3,6 @@
 	max-width: 845px;
 	margin-bottom: 20px;
 	overflow: hidden;
-	display: none;
 	&__inner{
 		background-color: #404040;
 		display: flex;
@@ -419,7 +418,19 @@
 	.slick-dots li.slick-active button:before {
 		background-color: #00B25D;
 	}
-
+	@include r(1060) {
+		&__for {
+			width: 100%;
+			max-width: 100%;
+			.slider-events__item {
+				padding: 0;
+				border:none;
+			}
+		}
+		&__nav {
+			display: none;
+		}
+	}
 	@include r(768) {
 		height: 100%;
 		&__header{
