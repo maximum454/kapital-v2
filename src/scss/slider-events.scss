@@ -1,19 +1,28 @@
 .slider-events {
 	width: 100%;
-	max-width: 845px;
 	margin-bottom: 20px;
 	overflow: hidden;
+	&__header{
+		display: flex;
+		align-items: center;
+		margin-bottom:  14px;
+	}
+	&__title{
+		font-size: 24px;
+		color: #404040;
+		margin: 0 14px 0 0 ;
+	}
 	&__inner{
 		background-color: #404040;
-		display: flex;
+		display: grid;
+		grid-template-columns: calc(100% - 295px) 295px;
+		grid-template-rows: auto;
+		grid-template-areas: "for nav";
 		&.light {
-			max-width: 865px;
 			background-color: transparent;
 			border-bottom: 1px solid #dddddd;
 
 			.slider-events__for {
-				max-width: 570px;
-
 				.slider-events__name {
 					color: #404040;
 				}
@@ -45,7 +54,6 @@
 		}
 
 		&.preview {
-			max-width: 865px;
 			background-color: transparent;
 			border-bottom: 1px solid #dddddd;
 
@@ -149,19 +157,9 @@
 			}
 		}
 	}
-	&__header{
-		display: flex;
-		align-items: center;
-		margin-bottom:  14px;
-	}
-	&__title{
-		font-size: 24px;
-		color: #404040;
-		margin: 0 14px 0 0 ;
-	}
 	&__for {
+		grid-area: for;
 		width: 100%;
-		max-width: 550px;
 		.slider-events__info {
 			position: absolute;
 			bottom: 16px;
@@ -222,8 +220,10 @@
 	}
 
 	&__nav {
+		grid-area: nav;
 		width: 100%;
-		max-width: 295px;
+		max-height: 550px;
+		overflow: hidden;
 		.slick-slide {
 			margin: 0 10px 0 20px;
 			border-bottom: 1px solid #00B35D;
@@ -268,7 +268,7 @@
 	&__link {
 		display: block;
 		text-decoration: none;
-		padding: 0 40px;
+		padding: 0 40px 20px;
 
 		&:hover {
 			text-decoration: none;
@@ -420,19 +420,43 @@
 	}
 	@include r(1060) {
 		&__for {
-			width: 100%;
-			max-width: 100%;
+			.slider-events__name {
+				color: #FFFFFF;
+				font-size: 22px;
+				line-height: 30px;
+				margin-bottom: 13px;
+				position: relative;
+
+				&:hover {
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: -10px;
+						left: 0;
+						width: 100%;
+						border-bottom: 3px solid #00B35D;
+					}
+
+				}
+			}
+		}
+	}
+	@include r(980) {
+		&__inner{
+			grid-template-columns: 100%;
+			grid-template-areas: "for";
+		}
+		&__for {
 			.slider-events__item {
 				padding: 0;
 				border:none;
 			}
 		}
-		&__nav {
+		&__nav{
 			display: none;
 		}
 	}
 	@include r(768) {
-		height: 100%;
 		&__header{
 			display: flex;
 			align-items: center;
@@ -444,23 +468,14 @@
 			margin: 0 14px 0 0 ;
 		}
 		&__for {
-			max-width: 100%;
 			.slider-events__item {
 				border-right: none;
 			}
-			.slider-events__img {
-				height: 100%;
-			}
-
 			.slider-events__name {
 				font-size: 18px;
 				line-height: 21px;
 				margin-bottom: 10px;
 			}
-		}
-
-		&__nav {
-			display: none;
 		}
 		&__anons {
 			font-size: 12px;

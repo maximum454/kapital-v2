@@ -14134,7 +14134,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($, jQuery) {
+/* WEBPACK VAR INJECTION */(function($) {
 
 __webpack_require__(/*! ./kapital.scss */ "./src/kapital.scss");
 
@@ -14176,15 +14176,21 @@ $('.js-project').slick({
 
 
 $('.js-slider-events-for').slick({
+    asNavFor: '.slider-events__nav',
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: true,
     dots: false,
     arrows: false,
     fade: false,
     vertical: true,
-    asNavFor: '.slider-events__nav',
+    pauseOnHover: true,
+    adaptiveHeight: true,
+    variableWidth: false,
+    focusOnSelect: true,
+    verticalSwiping: true,
     responsive: [{
-        breakpoint: 1061,
+        breakpoint: 980,
         settings: {
             dots: true,
             asNavFor: null,
@@ -14193,24 +14199,26 @@ $('.js-slider-events-for').slick({
     }]
 });
 $('.js-slider-events-nav').slick({
+    asNavFor: '.slider-events__for',
     slidesToShow: 5,
     slidesToScroll: 1,
-    asNavFor: '.slider-events__for',
-    vertical: true,
+    infinite: true,
     dots: false,
     arrows: false,
-    centerMode: false,
+    vertical: true,
+    pauseOnHover: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    variableWidth: false,
     focusOnSelect: true,
-    responsive: [{
-        breakpoint: 1061,
-        settings: 'unslick'
-    }]
+    verticalSwiping: true,
+    centerPadding: "0px"
 });
 
-function slickSliderWithResize() {
+/*function slickSliderWithResize() {
     if (jQuery(window).width() < 1160) {
-        $(window).on('resize orientationchange', function () {
-            setTimeout(function () {
+        $(window).on('resize orientationchange', function() {
+            setTimeout(function() {
                 $('.js-slider-events-for').slick('unslick');
                 $('.js-slider-events-nav').slick('unslick');
 
@@ -14222,14 +14230,16 @@ function slickSliderWithResize() {
                     fade: false,
                     vertical: true,
                     asNavFor: '.slider-events__nav',
-                    responsive: [{
-                        breakpoint: 1061,
-                        settings: {
-                            dots: true,
-                            asNavFor: null,
-                            vertical: false
+                    responsive: [
+                        {
+                            breakpoint: 1061,
+                            settings: {
+                                dots: true,
+                                asNavFor: null,
+                                vertical: false,
+                            }
                         }
-                    }]
+                    ]
                 });
                 $('.js-slider-events-nav').slick({
                     slidesToShow: 5,
@@ -14241,12 +14251,12 @@ function slickSliderWithResize() {
                     centerMode: false,
                     focusOnSelect: true
                 });
-            }, 100);
+            }, 100)
         });
     }
 }
-slickSliderWithResize();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+slickSliderWithResize();*/
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
