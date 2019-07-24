@@ -2,6 +2,7 @@
 	position: relative;
 	padding: 38px 98px 0;
 	margin-bottom: 115px;
+
 	&__rubric {
 		font-size: 24px;
 		font-weight: 900;
@@ -65,19 +66,22 @@
 	&__img {
 		margin-bottom: 15px;
 		position: relative;
+
 		img {
 			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			border: none!important;
 		}
-		&.play{
-			&:before{
+
+		&.play {
+			&:before {
 				content: '';
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%, -50%);
 				background-image: url("img/media-IconVideo.svg");
 				background-size: 80px;
 				background-position: center;
@@ -88,17 +92,20 @@
 
 		}
 	}
-	&__caption{
+
+	&__caption {
 		position: relative;
 		padding-left: 20px;
 		margin-bottom: 33px;
 	}
-	&__caption-title{
+
+	&__caption-title {
 		position: relative;
 		font-size: 14px;
 		font-weight: bold;
 		padding-bottom: 6px;
-		&:before{
+
+		&:before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -108,10 +115,12 @@
 			height: 100%;
 		}
 	}
-	&__source{
+
+	&__source {
 		position: relative;
 		font-size: 13px;
-		&:after{
+
+		&:after {
 			content: '';
 			position: absolute;
 			bottom: 0;
@@ -121,11 +130,36 @@
 			height: 100%;
 		}
 	}
-	h3 {
+
+	h1 {
+
+	}
+
+	h2 {
 		font-family: 'PT Serif', serif;
 		font-size: 36px;
 		line-height: 40px;
 		margin: 0 0 20px;
+	}
+
+	h3 {
+		font-family: 'PT Serif', serif;
+		font-size: 28px;
+	}
+
+	h4 {
+		font-family: 'PT Serif', serif;
+		font-size: 24px;
+	}
+
+	h5 {
+		font-family: 'PT Serif', serif;
+		font-size: 22px;
+	}
+
+	h6 {
+		font-family: 'PT Serif', serif;
+		font-size: 18px;
 	}
 
 	p {
@@ -135,6 +169,60 @@
 		margin-bottom: 25px;
 	}
 
+	ul {
+		margin: 10px 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			padding-left: 20px;
+			font-size: 18px;
+			margin-bottom: 5px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 8px;
+				left: 0;
+				background-color: #00B25D;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	ol {
+		padding: 0;
+		margin: 10px 0;
+		list-style: none;
+		li {
+			position: relative;
+			margin-bottom: 5px;
+			padding-left: 30px;
+			font-size: 18px;
+			counter-increment: li;
+			&:before {
+				content: counter(li)'.';
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: #00B25D;
+				display: inline-block;
+				width: 1em;
+				text-align: right;
+			}
+		}
+	}
+	img{
+		border: 5px solid #00B25D;
+	}
+	hr{
+		border: none;
+		width: 100%;
+		height: 1px;
+		background-color: #dddddd;
+	}
 	&__blockquote {
 		position: relative;
 		padding: 35px 50px;
@@ -173,7 +261,13 @@
 			margin: 0;
 		}
 	}
-	&__tag{
+	&__blockquote-author{
+		color: #404040;
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	&__tag {
 		position: relative;
 		background-image: url("img/tag-Icon.svg");
 		background-position: center left;
@@ -182,28 +276,33 @@
 		padding-left: 37px;
 		margin-bottom: 20px;
 	}
-	&__link{
+
+	&__link {
 		color: #007443;
 		font-size: 15px;
 		line-height: 20px;
 		text-decoration: underline;
 		padding-right: 10px;
 	}
-	&__txt{
+
+	&__txt {
 		font-size: 12px;
 		line-height: 18px;
 	}
-	&__social{
+
+	&__social {
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
-		.social{
+
+		.social {
 			flex-direction: column;
 			align-items: flex-start;
 		}
 	}
-	@include r(1160){
+
+	@include r(1160) {
 		&__blockquote {
 			width: 100%;
 			padding: 15px 0;
@@ -217,7 +316,7 @@
 				position: absolute;
 				top: 0;
 				left: 50%;
-				transform: translate( -50%, 0);
+				transform: translate(-50%, 0);
 				background-image: none;
 				background-color: #00B25D;
 				width: 90%;
@@ -243,7 +342,7 @@
 			}
 		}
 	}
-	@include r(768){
+	@include r(768) {
 		padding: 0 36px 0;
 		margin-bottom: 30px;
 		&__title {
@@ -274,7 +373,7 @@
 				position: absolute;
 				top: 0;
 				left: 50%;
-				transform: translate( -50%, 0);
+				transform: translate(-50%, 0);
 				background-image: none;
 				background-color: #00B25D;
 				width: 90%;
@@ -305,7 +404,7 @@
 			line-height: 32px;
 			margin: 0 0 20px;
 		}
-		&__social{
+		&__social {
 			position: absolute;
 			top: 0;
 			left: -10px;

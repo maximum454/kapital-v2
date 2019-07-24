@@ -8,7 +8,7 @@
 	}
 	&__inner{
 		display: grid;
-		grid-template-columns: 295px 295px 295px;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 230px;
 		grid-column-gap: 20px;
 		border-top: 1px solid #dddddd;
